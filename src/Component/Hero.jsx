@@ -66,14 +66,14 @@ const Hero = () => {
                                 <div className="card  image-full  ">
                                     <figure>
                                         <img
-                                        src="https://i.ibb.co.com/4p1NnBY/gsmarena-001.jpg"
+                                        src="https://i.ibb.co.com/PFr1bSG/Copilot-studio-Obalka.jpg"
                                         alt="photo"
                                         className="w-full h-[250px] md:h-[300px] rounded-xl object-cover "
                                         />
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Copilot</h2>
+                                        <p>Copilot is free AI chat bot and toll</p>
                                     </div>
                                 </div>
                             </div>
@@ -81,14 +81,14 @@ const Hero = () => {
                                 <div className="card image-full  ">
                                     <figure>
                                         <img
-                                        src="https://i.ibb.co.com/4p1NnBY/gsmarena-001.jpg"
+                                        src="https://i.ibb.co.com/fD19qss/Copilot-Enterprise-Blog-Header.png"
                                         alt="photo"
                                         className="w-full h-[250px] md:h-[300px] rounded-xl object-cover "
                                         />
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Github Copilot</h2>
+                                        <p>Copilot is a Ai tool for developer and it free for student</p>
                                     </div>
                                 </div>
                             </div>
@@ -96,14 +96,14 @@ const Hero = () => {
                                 <div className="card image-full ">
                                     <figure>
                                         <img
-                                        src="https://i.ibb.co.com/4p1NnBY/gsmarena-001.jpg"
+                                        src="https://i.ibb.co.com/8YSN31T/vast-starlink.jpg"
                                         alt="photo"
                                         className="w-full h-[250px] md:h-[300px] rounded-xl object-cover "
                                         />
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Star Link</h2>
+                                        <p>Star Link is a network of satellite it provide data from space</p>
                                     </div>
                                 </div>
                             </div>
@@ -111,14 +111,14 @@ const Hero = () => {
                                 <div className="card image-full ">
                                     <figure>
                                         <img
-                                        src="https://i.ibb.co.com/4p1NnBY/gsmarena-001.jpg"
+                                        src="https://i.ibb.co.com/K5nJv9F/0x0.jpg"
                                         alt="photo"
                                         className="w-full h-[250px] md:h-[300px] rounded-xl object-cover "
                                         />
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <h2 className="card-title">Countom computer</h2>
+                                        <p>Countom computer is the future of modern computing it work in to principal of countome electrode</p>
                                     </div>
                                 </div>
                             </div>

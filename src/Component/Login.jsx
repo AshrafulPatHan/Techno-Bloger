@@ -74,20 +74,10 @@ const Login = () => {
         <div>
             <Navbar/>
             <div>
-                <h2 className="text-4xl font-bold text-center mb-2 mt-11">Login now</h2>
-                <div className="hero bg-cyan-200 min-h-screen">
+                <h2 className="text-4xl font-bold text-center mt-1">Login now</h2>
+                <div className="hero  min-h-screen">
                     <div className="hero-content flex-col lg:flex-row-reverse">
-                        <div className="text-center lg:text-left">
-                            <DotLottieReact
-                                src="https://lottie.host/15535bab-5dfb-49d7-a12b-c97a4e5debb3/YzlhON4tI6.lottie"
-                                loop
-                                autoplay
-                                className='w-[300px]  md:w-[600px] lg:[900px] '
-                            />
-                            <p className="py-6 text-center">
-                                Login for enjoy our all function
-                            </p>
-                        </div>
+                        {/* Login From */}
                         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <form onSubmit={handleLogin} className="card-body">
                                 <div className="form-control">
@@ -142,6 +132,18 @@ const Login = () => {
                             >
                                 Login with Google
                             </button>
+                        </div>
+                        {/* Animation */}
+                        <div className="text-center border-[7px] py-7 rounded-md bg-blue-50 border-blue-300 lg:text-left">
+                            <DotLottieReact
+                                src="https://lottie.host/15535bab-5dfb-49d7-a12b-c97a4e5debb3/YzlhON4tI6.lottie"
+                                loop
+                                autoplay
+                                className='w-[300px]  md:w-[600px] '
+                            />
+                            <p className="py-6 text-center">
+                                Login for enjoy our all function
+                            </p>
                         </div>
                     </div>
                 </div>

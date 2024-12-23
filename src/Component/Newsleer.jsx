@@ -12,7 +12,7 @@ const Newsleer = () => {
                     rounded-xl bg-slate-50 sm:w-[60%] w-[90%] '>
                     <div>
                         <img
-                            src="https://i.ibb.co/6NZyr8T/capsule-616x353.jpg"
+                            src="https://www.goldcoastbridgeclub.com/TinyFileManager/resources/files/55///newsletter1.png"
                             className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform 
                             transform hover:scale-105"
                             />
@@ -22,7 +22,7 @@ const Newsleer = () => {
                         <p className='text-lg font-semibold'>subscribe to our Newsleer and stay update</p>
                         <label className="input input-bordered flex items-center gap-2">
                         <MdEmail />
-                            <input type="text" className="grow" placeholder="Email" />
+                            <input type="text" className="grow w-[200px] sm:w-[300px] " placeholder="Email" />
                         </label>
                         <button className='w-52 bg-blue-500 hover:bg-blue-300 p-2 text-lg 
                         text-white font-semibold rounded-xl'>

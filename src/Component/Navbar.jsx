@@ -43,8 +43,8 @@ const Navbar = () => {
 
     return (
         <div className='sticky top-0 z-50'>
-            <div >
-                <div className="navbar ">
+            <div   style={{backgroundColor:"#FFFFFF80",}} >
+                <div className="navbar">
                     <div className="navbar-start">
                         {/* mobile dropdown */}
                         <div className="dropdown">
@@ -86,15 +86,15 @@ const Navbar = () => {
                         )}
                         </div>
                         {/* company name */}
-                        <div className='flex flex-col sm:flex-row items-center '>
-                            <img src={Logo} alt="image" className='w-[150px] sm:w-[150px] md:w-[130px]  ' />
+                        <div className='flex flex-col sm:flex-row items-center'>
+                            <img src={Logo} alt="image" className='w-[50px] sm:w-[70px] '/>
                             <p className="text-sm font-bold sm:text-xl hidden md:font-bold">technobloger</p>
                         </div>
                     </div>
                     {/* navigation */}
                     <div className="navbar-center hidden lg:flex">
                         {user ? (
-                            <div className=' flex lg:flex-col lg:items-center xl:flex-row items-center gap-2'>
+                            <div className=' flex lg:flex-col lg:items-center xl:flex-row items-center'>
                                 <div className='flex flex-row gap-2'>
                                     <Link to='/' className=' text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold'>
                                     Home

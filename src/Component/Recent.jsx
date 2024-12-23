@@ -13,8 +13,10 @@ const Recent = () => {
                     rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg
                     bg-slate-50'>
                         <div>
-                            <img src="https://i.ibb.co/L0Zqk7c/2x1-NSwitch-Minecraft-image1600w.jpg" 
-                            className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                            <img src="https://github.blog/wp-content/uploads/2024/02/Copilot-Enterprise-Blog-Header.png?resize=1600%2C850" 
+                            className=" h-[250px] md:h-[300px] w-[300px]  md:w-[600px]
+                            rounded-xl object-cover 
+                            transition-transform transform hover:scale-105"
                             alt="photo" />
                         </div>
                         <div className='flex flex-col ml-2 items-start'>
@@ -36,8 +38,8 @@ const Recent = () => {
                     bg-slate-50
                     '>
                         <div>
-                            <img src="https://i.ibb.co/L0Zqk7c/2x1-NSwitch-Minecraft-image1600w.jpg" 
-                            className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                            <img src="https://itknowledgezone.com/wp-content/uploads/2023/02/Will-ChatGPT-take-over-the-digital-world.jpg" 
+                            className="h-[250px] md:h-[300px] w-[300px]  md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
                             alt="photo" />
                         </div>
                         <div className='flex flex-col ml-2 items-start'>
@@ -59,8 +61,8 @@ const Recent = () => {
                     bg-slate-50
                     '>
                         <div>
-                            <img src="https://i.ibb.co/L0Zqk7c/2x1-NSwitch-Minecraft-image1600w.jpg" 
-                            className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                            <img src="https://www.eway-crm.com/wp-content/uploads/2023/12/Copilot-studio_Obalka.jpg" 
+                            className="h-[250px] md:h-[300px] w-[300px]  md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
                             alt="photo" />
                         </div>
                         <div className='flex flex-col ml-2 items-start'>
@@ -82,8 +84,8 @@ const Recent = () => {
                     bg-slate-50
                     '>
                         <div>
-                            <img src="https://i.ibb.co/L0Zqk7c/2x1-NSwitch-Minecraft-image1600w.jpg" 
-                            className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                            <img src="https://imageio.forbes.com/specials-images/imageserve/675b55f62e8f078fc71b1fa0/0x0.jpg?format=jpg&crop=3524,1981,x0,y0,safe&height=900&width=1600&fit=bounds" 
+                            className="h-[250px] md:h-[300px] w-[300px]  md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
                             alt="photo" />
                         </div>
                         <div className='flex flex-col ml-2 items-start'>
@@ -105,8 +107,8 @@ const Recent = () => {
                     bg-slate-50
                     '>
                         <div>
-                            <img src="https://i.ibb.co/L0Zqk7c/2x1-NSwitch-Minecraft-image1600w.jpg" 
-                            className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                            <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2024/12/shutterstock_1287557662.jpg" 
+                            className="h-[250px] md:h-[300px] w-[300px]  md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
                             alt="photo" />
                         </div>
                         <div className='flex flex-col ml-2 items-start'>
@@ -128,8 +130,8 @@ const Recent = () => {
                     bg-slate-50
                     '>
                         <div>
-                            <img src="https://i.ibb.co/L0Zqk7c/2x1-NSwitch-Minecraft-image1600w.jpg" 
-                            className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                            <img src="https://i0.wp.com/spacenews.com/wp-content/uploads/2024/04/vast-starlink.jpg?fit=1920%2C1080&quality=89&ssl=1" 
+                            className="h-[250px] md:h-[300px] w-[300px]  md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
                             alt="photo" />
                         </div>
                         <div className='flex flex-col ml-2 items-start'>

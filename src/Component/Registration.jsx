@@ -87,19 +87,21 @@ const Registration = () => {
                 <div>
                 <h2 className="text-4xl font-bold text-center mb-2 mt-11">Registration/Signup</h2>
                 <div>
-                    <div className="hero bg-cyan-200 min-h-screen">
+                    <div className="hero  min-h-screen">
                         <div className="hero-content flex-col lg:flex-row-reverse">
-                            <div className="text-center lg:text-left">
+                            {/* Animation */}
+                            <div className="text-center lg:text-left border-[7px] py-20 rounded-md bg-blue-50 border-blue-300">
                                 <DotLottieReact
                                     src="https://lottie.host/f107d7b7-2e9a-463e-9698-8b965b72238f/mPsFMFWlBi.lottie"
                                     loop
                                     autoplay
-                                    className='w-[300px]  md:w-[600px] lg:[900px] '
+                                    className='w-[300px]  md:w-[600px]'
                                 />
                                 <p className="py-6 text-center">
                                     registration for login our website
                                 </p>
                             </div>
+                            {/* Registration */}
                             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                                 <form onSubmit={handelRegistra} className="card-body">
                                     <div className="form-control">

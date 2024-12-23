@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Recent from './Recent';
 import Newsleer from './Newsleer';
 import AboutUs from './AboutUs';
+import Mape from './Mape';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                 <AboutUs/>
                 <Recent/>
                 <Newsleer/>
+                <Mape/>
                 <Footer/>
             </div>
         </>
