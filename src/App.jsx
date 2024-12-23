@@ -11,6 +11,7 @@ import Allblogs from './Component/Allblogs';
 import Wishlist from './Component/Wishlist';
 import Registration from './Component/Registration';
 import AuthProvider from './Component/AuthProvider/AuthProvider';
+import About from './Component/About';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/allblogs" element={<Allblogs />} />
           <Route path="/featuredblogs" element={<FeaturedBlogs />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/about" element={<About />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registration" element={<Registration />} />
           <Route path="*" element={<Error />} />

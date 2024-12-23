@@ -62,7 +62,7 @@ const Footer = () => {
                         </p>
                     </aside>
                     <nav className="md:place-self-center md:justify-self-end">
-                    <div className='text-5xl flex flex-col md:flex-row items-center gap-0 '>
+                    <div className='text-5xl flex flex-row items-center gap-0 '>
                         <div>
                         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands text-2xl  fa-facebook" style={{ color: '#4267B2', marginRight: '10px' }}></i>
