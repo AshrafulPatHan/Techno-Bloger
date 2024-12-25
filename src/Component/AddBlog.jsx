@@ -33,7 +33,7 @@ const AddBlog = () => {
         console.log(allData);
 
         // send data to the server
-        fetch('https://server-op-production.up.railway.app/add', {
+        fetch('http://localhost:5222/alldata', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const AddBlog = () => {
         .then((data) => {
             console.log(data);
             toast.success("Blog added successfully!");
-            navigate('/myReviews');
+            navigate('/');
         })
         .catch((error) => {
             console.error('Error:', error);

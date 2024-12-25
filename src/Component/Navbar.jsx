@@ -175,7 +175,7 @@ const Navbar = () => {
                                 {user ? (
                                     <div >
                                         <div className='flex flex-row items-center gap-1 md:gap-2 '>
-                                            <div className="tooltip" data-tip={user.displayName || "User"}>
+                                            <div className="tooltip tooltip-bottom" data-tip={user.displayName || "User"}>
                                             <img
                                                     src={user.photoURL || "default-avatar.png"}
                                                     alt={user.displayName || "User"}
