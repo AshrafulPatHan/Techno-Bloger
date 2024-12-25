@@ -12,6 +12,7 @@ import AuthProvider from './Component/AuthProvider/AuthProvider';
 import About from './Component/About';
 import { ToastContainer } from 'react-toastify';
 import Privaterout from './Component/Rout/Privaterout';
+import Details from './Component/Details';
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registration" element={<Registration />} />
+          <Route path="/allblogs/:id" element={<Privaterout><Details /></Privaterout>} />
           <Route path="*" element={<Error />} />
         </Routes>
         <ToastContainer
