@@ -20,6 +20,34 @@ const Error = () => {
                     className=' w-[322px] sm:w-[600px] md:w-[750px] xl:w-[1200px]  '
                     />
                 </div>
+                <nav className="md:place-self-center md:justify-self-end">
+                    <div className='text-5xl flex flex-row items-center gap-0 '>
+                        <div>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands text-2xl  fa-facebook" style={{ color: '#4267B2', marginRight: '10px' }}></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands text-2xl  fa-twitter" style={{ color: '#1DA1F2', marginRight: '10px' }}></i>
+                        </a>
+                        </div>
+                        <div>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands  text-2xl fa-instagram" style={{ color: '#E1306C', marginRight: '10px' }}></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands  text-2xl fa-linkedin" style={{ color: '#4267B2', marginRight: '10px' }}></i>
+                        </a>
+                        </div>
+                        <div>
+                        <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands  text-2xl fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands  text-2xl fa-youtube" style={{ color: '#E1306C', marginRight: '10px' }}></i>
+                        </a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
         </>

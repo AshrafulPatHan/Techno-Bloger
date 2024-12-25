@@ -141,7 +141,7 @@ const Navbar = () => {
                                         <div className="tooltip" data-tip={user.displayName || "User"}>
                                             <img
                                                     src={user.photoURL || "default-avatar.png"}
-                                                    alt="Sample"
+                                                    alt={user.displayName || "User"}
                                                     className="w-8 md:w-10 h-8 md:h-10  rounded-full" 
                                                     onMouseEnter={() => setShowTooltip(true)}
                                                     onMouseLeave={() => setShowTooltip(false)} 
@@ -178,7 +178,7 @@ const Navbar = () => {
                                             <div className="tooltip" data-tip={user.displayName || "User"}>
                                             <img
                                                     src={user.photoURL || "default-avatar.png"}
-                                                    alt="Sample"
+                                                    alt={user.displayName || "User"}
                                                     className="w-8 md:w-10 h-8 md:h-10  rounded-full" 
                                                     onMouseEnter={() => setShowTooltip(true)}
                                                     onMouseLeave={() => setShowTooltip(false)} 

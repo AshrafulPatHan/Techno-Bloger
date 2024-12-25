@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
 import Home from './Component/Home';
 import Error from './Component/Error';
-import { ToastContainer } from 'react-toastify';
 import Login from './Component/Login';
 import AddBlog from './Component/AddBlog';
 import FeaturedBlogs from './Component/FeaturedBlogs';
@@ -12,6 +10,8 @@ import Wishlist from './Component/Wishlist';
 import Registration from './Component/Registration';
 import AuthProvider from './Component/AuthProvider/AuthProvider';
 import About from './Component/About';
+import { ToastContainer } from 'react-toastify';
+import Privaterout from './Component/Rout/Privaterout';
 
 
 
@@ -21,10 +21,10 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/addblog" element={<AddBlog  />} />
+          <Route path="/addblog" element={<Privaterout><AddBlog  /></Privaterout>} />
           <Route path="/allblogs" element={<Allblogs />} />
           <Route path="/featuredblogs" element={<FeaturedBlogs />} />
-          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/wishlist" element={<Privaterout><Wishlist /></Privaterout>} />
           <Route path="/about" element={<About />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registration" element={<Registration />} />
