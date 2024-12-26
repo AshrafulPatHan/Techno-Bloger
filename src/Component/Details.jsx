@@ -125,6 +125,7 @@ const handleUpdate = (cardData) => {
                 </div>
                 <div className="mt-9 mb-8">
                     <div className="flex flex-col items-center">
+                        {/* update */}
                         {user?.email === cardData.userEmail && (
                             <div>
                                 <button 
@@ -134,7 +135,13 @@ const handleUpdate = (cardData) => {
                                 </button>
                             </div>
                         )}
-                        <form
+                        {/* comante */}
+                        {user?.email === cardData.userEmail ? (
+                            <div>
+                                <p className="text-lg mb-3">you are the oner of this blog</p>
+                            </div>
+                        ) : (
+                            <form
                             className="flex flex-col sm:flex-row sm:items-center items-end mb-6 gap-3"
                             onSubmit={handleAddComment}
                         >
@@ -148,6 +155,7 @@ const handleUpdate = (cardData) => {
                                 Comment <FaCommentDots />
                             </button>
                         </form>
+                        ) }
                         <div className="mockup-window bg-base-300 border w-[300px] md:w-[650px] xl:w-[700px]">
                             <div className="bg-base-200 flex px-4 py-6">
                                 <div className="flex flex-col items-start">

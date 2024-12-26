@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { useNavigate } from 'react-router';
+import DataTable from 'react-data-table-component'; // Import DataTable
 import { MdDelete } from 'react-icons/md';
 
 const FeaturedBlogs = () => {
@@ -14,73 +15,87 @@ const FeaturedBlogs = () => {
         navigate(`/allblogs/${all.id}`, { state: all });
     };
 
+    const columns = [
+        {
+            name: 'Title',
+            selector: row => row.Title,
+            sortable: true,
+            cell: row => (
+                <div className="flex items-center gap-3">
+                    <div className="avatar">
+                        <div className="rounded-xl h-10 sm:h-24 w-10 sm:w-24 xl:w-32">
+                            <img src={row.Image} alt={row.name} />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="font-bold">{row.Title}</div>
+                    </div>
+                </div>
+            ),
+        },
+        {
+            name: 'Short Description',
+            selector: row => row.shortdescription,
+            sortable: true,
+        },
+        {
+            name: 'Category',
+            selector: row => row.category,
+            sortable: true,
+        },
+        {
+            name: 'Blog Length',
+            selector: row => row.longdescription ? row.longdescription.split(' ').length : 0,
+            sortable: true,
+            cell: row => (
+                <span>{row.longdescription ? row.longdescription.split(' ').length : 0} Word</span>
+            ),
+        },
+        {
+            name: 'Author',
+            selector: row => row.username || "Anonymous",
+            sortable: true,
+        },
+        {
+            name: 'Publish Date',
+            selector: row => new Date(row.date).toLocaleString(),
+            sortable: true,
+        },
+    ];
+
     useEffect(() => {
         fetch("http://localhost:5222/featured-blogs")
-        .then((res) => res.json())
-        .then((data) => {
-            console.log("Fetched Data:", data);
-            // Sort blogs by the length of the long description (word count)
-            const sortedData = data.sort((a, b) => {
-                const wordCountA = a.longdescription ? a.longdescription.split(' ').length : 0;
-                const wordCountB = b.longdescription ? b.longdescription.split(' ').length : 0;
-                return wordCountB - wordCountA; // Descending order (top posts first)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("Fetched Data:", data);
+                const sortedData = data.sort((a, b) => {
+                    const wordCountA = a.longdescription ? a.longdescription.split(' ').length : 0;
+                    const wordCountB = b.longdescription ? b.longdescription.split(' ').length : 0;
+                    return wordCountB - wordCountA;
+                });
+                setData(sortedData);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+                setLoading(false);
             });
-            setData(sortedData);
-            setLoading(false);
-        })
-        .catch((error) => {
-            console.error("Error fetching data:", error);
-            setLoading(false);
-        });
     }, []);
 
     return (
         <div>
             <Navbar />
             <div>
-                <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* Table Head */}
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Short Description</th>
-                                <th>Category</th>
-                                <th>Blog Length</th>
-                                <th>Author</th> {/* Added new column */}
-                                <th>Publish Date</th> {/* Added new column */}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {data.map((item) => (
-                                <tr key={item._id}>
-                                    <td>
-                                        <div className="flex items-center gap-3">
-                                            <div className="avatar">
-                                                <div className="rounded-xl h-10 sm:h-24 w-10 sm:w-24 xl:w-32">
-                                                    <img src={item.Image} alt={item.name} />
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div className="font-bold">{item.Title}</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>{item.shortdescription}</td>
-                                    <td>{item.category}</td>
-                                    <td>
-                                        {item.longdescription
-                                            ? item.longdescription.split(' ').length
-                                            : 0}{" "}
-                                        Word
-                                    </td>
-                                    <td>{item.username || "Anonymous"}</td>
-                                    <td>{new Date(item.date).toLocaleString()}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
+                <DataTable
+                    title="Featured Blogs"
+                    columns={columns}
+                    data={data}
+                    progressPending={loading} // Show loading indicator
+                    pagination
+                    highlightOnHover
+                    pointerOnHover
+                    onRowClicked={handleExploreDetails} // Navigate on row click
+                />
             </div>
             <Footer />
         </div>

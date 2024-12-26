@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MdEmail } from 'react-icons/md';
 import { toast } from 'react-toastify';
+import { AnimatePresence } from "motion/react"
+import * as motion from "motion/react-client"
+import { BiLike } from "react-icons/bi";
+import { BiSolidLike } from "react-icons/bi";
+
+
 
 const Newsleer = () => {
-
+    const [isVisible, setIsVisible] = useState(true)
     const handelSubmit = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -39,10 +45,32 @@ const Newsleer = () => {
                             <MdEmail />
                                 <input type="email" name='email' className="grow w-[200px] sm:w-[300px] " placeholder="Email" />
                             </label>
-                            <button className='w-52 bg-blue-500 hover:bg-blue-300 
-                            p-2 text-lg text-white font-semibold rounded-xl'>
-                                submits
-                            </button>
+                            <div className='flex flex-row items-center gap-2'>
+                                <button className='w-52 bg-blue-500 hover:bg-blue-300 
+                                p-2 text-lg text-white font-semibold rounded-xl'>
+                                    submits
+                                </button>
+                                {/* Framer motion */}
+                                <div className='flex flex-col items-center'>
+                                    <AnimatePresence initial={false}>
+                                        {isVisible ? (
+                                            <motion.div
+                                                initial={{ opacity: 0, scale: 0 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                exit={{ opacity: 0, scale: 0 }}
+                                                key="box"
+                                            />
+                                        ) : null}
+                                    </AnimatePresence>
+                                    <motion.button
+                                        className='text-4xl'
+                                        onClick={() => setIsVisible(!isVisible)}
+                                        whileTap={{ y: 1 }}
+                                    >
+                                        {isVisible ? <BiLike /> : <BiSolidLike />}
+                                    </motion.button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
