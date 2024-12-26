@@ -19,12 +19,12 @@ const About = () => {
                     <div className="border-[15px] border-green-300">
                         <div className="flex flex-col items-start p-2 gap-3">
                             <h2 className="text-3xl font-bold">Technobloger</h2>
-                            <div className="text-base sm:text-lg font-medium w-[300px] sm:w-[400px] lg:w-[500px] xl:w-[520px] 2xl:w-[720px]">
+                            <div className="text-base sm:text-lg font-medium w-[300px] sm:w-[400px] lg:w-[500px] 
+                            xl:w-[520px] 2xl:w-[720px]">
                                 <h1>Technobloger: Your Ultimate Technology Hub</h1>
                                 <p>
                                     Technobloger is your go-to destination for the latest in technology. We offer comprehensive reviews, insightful articles, and up-to-date news on startups, gadgets, and tech trends. Our mission is to keep you informed and ahead in the fast-paced world of technology.
                                 </p>
-
                                 <h2 className='text-xl font-bold'>Why Choose Technobloger?</h2>
                                 <p>
                                     At Technobloger, we understand the challenges of staying updated in an ever-evolving tech landscape. That’s why our team of experienced writers and tech enthusiasts works tirelessly to bring you the most relevant and accurate information. Whether you're a tech enthusiast, entrepreneur, or industry professional, Technobloger has something for everyone.

@@ -51,8 +51,10 @@ const Registration = () => {
         if (!validatePassword(password)) {
             return;
         }
+        
 
         console.log(name, email, photoURL, password);
+        
 
         // Creating a user with Firebase Authentication
         createUserWithEmailAndPassword(auth, email, password)
@@ -67,15 +69,36 @@ const Registration = () => {
                 })
                     .then(() => {
                         console.log('Profile updated successfully');
+                        const userData ={ name, email, photoURL};
+                        // -----------send to server
+                        fetch('http://localhost:5222/userData', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(userData),
+                        })
+                        .then((res) => res.json())
+                        .then((data) => {
+                            console.log(data);
+                        })
+                        .catch((error) => {
+                            console.error('Error:', error);
+                            toast.error("Error adding Blog");
+                        } );
                     })
                     .catch((error) => {
                         console.error('Error updating profile:', error.message);
                         toast('soothing is wrang')
                     });
-            } )
+            })
             .catch((error) => {
                 console.error('Error creating user:', error.message);
             });
+
+
+            
+
     };
 
 

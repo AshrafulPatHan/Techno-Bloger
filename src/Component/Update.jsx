@@ -1,16 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { useState } from 'react';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { AuthContext } from './AuthProvider/AuthProvider';
 
+const Update = () => {
 
-const AddBlog = () => {
     const { user } = useContext(AuthContext);
     const [category, setCategory] = useState(''); 
+    const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
+    const { state: locationData } = useLocation(); 
+    const [cardData, setCardData] = useState(locationData || {});
+
+    useEffect(() => {
+        if (locationData) {
+            setCardData(locationData);
+            setCategory(locationData.category || ''); // Set Category if present
+            setLoading(false);
+        }
+    }, [locationData]);
 
 
     const handleAddReview = event => {
@@ -29,35 +39,39 @@ const AddBlog = () => {
             return;
         }
 
-        const allData = { Title, shortdescription, Image, longdescription, category, username, userEmail };
-        console.log(allData);
+        const Update = { Title, shortdescription, Image, longdescription, category, username, userEmail };
+        console.log(Update);
 
         // send data to the server
-        fetch('http://localhost:5222/alldata', {
-            method: 'POST',
+        const { _id: id } = cardData; // Get ID from cardData
+
+        // send data to the server
+        fetch(`http://localhost:5222/update/${id}`, {
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(allData),
+            body: JSON.stringify(Update),
         })
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
-            toast.success("Blog added successfully!");
+            console.log('Response:', data);
+            setLoading(false);
+            toast.success("Review updated successfully!");
             navigate('/');
         })
         .catch((error) => {
             console.error('Error:', error);
-            toast.error("Error adding Blog");
-        } );
+            toast.error("Error updating review");
+            setLoading(false);
+        });
     };
 
 
 
-
     return (
-            <div>
-            <Navbar />
+        <div>
+            <Navbar/>
             <div className="flex justify-center mt-5 px-4">
                 <form onSubmit={handleAddReview} className="card bg-base-100 shadow-2xl p-8 w-full max-w-4xl">
                 <h2 className="text-4xl font-bold text-center mb-8">Add Your Own Blog</h2>
@@ -71,6 +85,7 @@ const AddBlog = () => {
                         <input
                         type="text"
                         name="Title"
+                        defaultValue={cardData.Title}
                         placeholder="Blog Title"
                         className="input input-bordered input-secondary w-full"
                         />
@@ -81,6 +96,7 @@ const AddBlog = () => {
                         </label>
                         <textarea
                         name="shortdescription"
+                        defaultValue={cardData.shortdescription}
                         placeholder="Write your Description..."
                         className="textarea textarea-bordered textarea-secondary w-full"
                         ></textarea>
@@ -91,6 +107,7 @@ const AddBlog = () => {
                         </label>
                         <textarea
                         name="longdescription"
+                        defaultValue={cardData.longdescription}
                         placeholder="Write your Description..."
                         className="textarea textarea-bordered textarea-secondary w-full"
                         ></textarea>
@@ -102,6 +119,7 @@ const AddBlog = () => {
                         <input
                         type="text"
                         name="Image"
+                        defaultValue={cardData.Image}
                         placeholder="Image URL"
                         className="input input-bordered input-secondary w-full"
                         />
@@ -150,9 +168,9 @@ const AddBlog = () => {
                 <button className="btn btn-primary w-full mt-6">Submit</button>
                 </form>
             </div>
-            <Footer />
-            </div>
-        );
-    };      
+            <Footer/>
+        </div>
+    );
+};
 
-export default AddBlog;
+export default Update;

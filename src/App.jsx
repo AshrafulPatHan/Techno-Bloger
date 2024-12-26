@@ -13,6 +13,7 @@ import About from './Component/About';
 import { ToastContainer } from 'react-toastify';
 import Privaterout from './Component/Rout/Privaterout';
 import Details from './Component/Details';
+import Update from './Component/Update';
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/allblogs" element={<Allblogs />} />
           <Route path="/featuredblogs" element={<FeaturedBlogs />} />
           <Route path="/wishlist" element={<Privaterout><Wishlist /></Privaterout>} />
+          <Route path="/update/:id" element={<Privaterout><Update/></Privaterout>} />
           <Route path="/about" element={<About />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registration" element={<Registration />} />
