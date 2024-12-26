@@ -16,7 +16,7 @@ const Recent = () => {
     
 // fetch data
     useEffect(() => {
-        fetch("http://localhost:5222/alldata")
+        fetch("http://localhost:5222/limited-data")
         .then((res) => res.json())
         .then((data) => {
             setAll(data);

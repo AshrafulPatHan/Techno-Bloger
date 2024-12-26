@@ -74,7 +74,7 @@ const Update = () => {
             <Navbar/>
             <div className="flex justify-center mt-5 px-4">
                 <form onSubmit={handleAddReview} className="card bg-base-100 shadow-2xl p-8 w-full max-w-4xl">
-                <h2 className="text-4xl font-bold text-center mb-8">Add Your Own Blog</h2>
+                <h2 className="text-4xl font-bold text-center mb-8">Update Your Blog</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Left Section */}
                     <div>
