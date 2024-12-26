@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from './AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 
@@ -99,10 +99,10 @@ const Recent = () => {
                                                     Wishlist
                                                 </button>
                                             ) : (
-                                                <button className='border-2 text-lg border-green-300 w-28 text-sky-400 
+                                                <Link to='/login' className='border-2 text-lg border-green-300 w-28 text-sky-400 
                                                 hover:bg-green-300 p-2'>
                                                     Wishlist
-                                                </button>
+                                                </Link>
                                             )}
                                         </div>
                                     </div>

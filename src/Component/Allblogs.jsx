@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from './AuthProvider/AuthProvider';
+import { toast } from 'react-toastify';
 
 
 const Allblogs = () => {
@@ -30,6 +31,26 @@ const Allblogs = () => {
             setLoading(false);
         });
     }, []);
+
+    // Add to WatchList
+    const handleWatchList = (All) => {
+        fetch('http://localhost:5222/watchLists', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(All), // Send only the selected item
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            toast.success("Watchlist added successfully!");
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            toast.error("Error adding to watchlist");
+        });
+    };
 
 
     if (loading) {
@@ -67,9 +88,18 @@ const Allblogs = () => {
                                             onClick={() => handleExploreDetails(All)}>
                                                 Details
                                             </button>
-                                            <button className='border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2'>
-                                                Wishlist
-                                            </button>
+                                            {user ? (
+                                                <button className='border-2 text-lg border-green-300 w-28 text-sky-400 
+                                                hover:bg-green-300 p-2'
+                                                onClick={() => handleWatchList(All)}>
+                                                    Wishlist
+                                                </button>
+                                            ) : (
+                                                <Link to='/login' className='border-2 text-lg border-green-300 w-28 text-sky-400 
+                                                hover:bg-green-300 p-2'>
+                                                    Wishlist
+                                                </Link>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

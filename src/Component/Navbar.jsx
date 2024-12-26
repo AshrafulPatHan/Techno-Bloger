@@ -121,10 +121,10 @@ const Navbar = () => {
                                 <Link to='/' className='text-2xl text-green-400 font-bold'>Home</Link>
                             </li>
                             <li>
-                            <Link to='/reviews' className='text-2xl text-green-400 font-bold'>All blogs</Link>
+                            <Link to='/allblogs' className='text-2xl text-green-400 font-bold'>All blogs</Link>
                             </li>
                             <li>
-                            <Link to='/reviews' className='text-2xl text-green-400 font-bold'>Featured Blogs</Link>
+                            <Link to='/featuredblogs' className='text-2xl text-green-400 font-bold'>Featured Blogs</Link>
                             </li>
                         </ul>
                         )}

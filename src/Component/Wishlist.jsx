@@ -71,7 +71,7 @@ const Wishlist = () => {
                 {/* Table Head */}
                 <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Title</th>
                     <th>Category</th>
                     <th>Blog Length</th>
                     <th>Actions</th>
