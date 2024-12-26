@@ -29,34 +29,38 @@ const Wishlist = () => {
         });
     }, []);
 
-        const handleDelete = id => {
-            console.log("this is ild",id);
-            swal({
-            title: "Are you sure?",
-            text: "You will not be able to recover this data!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-            })
-            .then((willDelete) => {
-            if (willDelete) {
-                fetch(`http://localhost:5222/wish/${id}`, {
-                method: 'DELETE'
+
+            const handleDelete = id => {
+                swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover this data!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
                 })
-                .then(res => res.json())
-                .then(result => {
-                if (result.deletedCount > 0) {
-                    swal("Deleted!", "Your data has been deleted.", "success");
-                    const remainingData = data.filter(HRate => HRate._id !== id);
-                    setData(remainingData);
+                .then((result) => {
+                if (result.isConfirmed) {
+                        fetch(`http://localhost:5222/watchListsdata/${id}`, {
+                            method: 'DELETE',
+                        })
+                        .then(res => {
+                            if (!res.ok) {
+                            throw new Error('Failed to delete');
+                            }
+                            return res.json();
+                        })
+                        .then(() => {
+                            swal("Deleted!", "Your data has been deleted.", "success");
+                            setData(prevData => prevData.filter(item => item._id !== id));
+                        })
+                        .catch(error => {
+                            console.error('Error deleting data:', error);
+                            swal("Error", "Failed to delete data.", "error");
+                        });
                 }
-                })
-                .catch(error => {
-                console.error('Error deleting data:', error);
                 });
-            }
-            });
-        };
+            };
+
 
     return (
         <div>

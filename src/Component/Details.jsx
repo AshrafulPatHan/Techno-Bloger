@@ -125,13 +125,15 @@ const handleUpdate = (cardData) => {
                 </div>
                 <div className="mt-9 mb-8">
                     <div className="flex flex-col items-center">
-                        <div>
-                            <button 
-                            onClick={() => handleUpdate(cardData)}
-                            className="btn btn-active bg-blue-400 text-white mb-3">
-                                Updates <MdTipsAndUpdates />
-                            </button>
-                        </div>
+                        {user?.email === cardData.userEmail && (
+                            <div>
+                                <button 
+                                    onClick={() => handleUpdate(cardData)}
+                                    className="btn btn-active bg-blue-400 text-white mb-3">
+                                    Update <MdTipsAndUpdates />
+                                </button>
+                            </div>
+                        )}
                         <form
                             className="flex flex-col sm:flex-row sm:items-center items-end mb-6 gap-3"
                             onSubmit={handleAddComment}
