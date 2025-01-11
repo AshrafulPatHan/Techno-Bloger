@@ -24,11 +24,7 @@ const Recent = () => {
 
     // Add to WatchList
     const handleWatchList = (All) => {
-<<<<<<< HEAD
-        fetch('https://techno-server.up.railway.app/watchLists', {
-=======
-        fetch('http://localhost:5222/watchLists', {
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
+fetch('https://techno-server.up.railway.app/watchLists', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,23 +42,19 @@ const Recent = () => {
         });
     };
 
-    // Fetch data
-    useEffect(() => {
-<<<<<<< HEAD
-        fetch("https://techno-server.up.railway.app/limited-data")
-=======
-        fetch("http://localhost:5222/limited-data")
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
-        .then((res) => res.json())
-        .then((data) => {
-            setAll(data);
-            setLoading(false);
-        })
-        .catch((error) => {
-            console.error("Error fetching data:", error);
-            setLoading(false);
-        });
-    }, []);
+// Fetch data
+useEffect(() => {
+    fetch("https://techno-server.up.railway.app/limited-data")
+    .then((res) => res.json())
+    .then((data) => {
+        setAll(data);
+        setLoading(false);
+    })
+    .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+    });
+}, []);
 
     if (loading) {
         return <div className="flex flex-col items-center my-36">

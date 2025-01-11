@@ -71,15 +71,7 @@ const Registration = () => {
                         console.log('Profile updated successfully');
                         const userData ={ name, email, photoURL};
                         // -----------send to server
-<<<<<<< HEAD
-<<<<<<< HEAD
                         fetch('https://techno-server.up.railway.app/userData', {
-=======
-                        fetch('http://localhost:5222/userData', {
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
-=======
-                        fetch('http://localhost:5222/userData', {
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',

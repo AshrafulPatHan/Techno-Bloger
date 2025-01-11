@@ -12,7 +12,6 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router';
 
 
-
 const Navbar = () => {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
@@ -34,25 +33,24 @@ const Navbar = () => {
 
         const [theme, setTheme] = useState('light'); 
 
+        useEffect(() => {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            setTheme(currentTheme);
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }, []);
+
         const toggleTheme = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
         };
 
 
     return (
         <div className='sticky top-0 z-50'>
             <div   style={{backgroundColor:"#FFFFFF80",}} >
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="navbar mb-16">
-=======
-                <div className="navbar">
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
-=======
-                <div className="navbar">
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
                     <div className="navbar-start">
                         {/* mobile dropdown */}
                         <div className="dropdown">
@@ -67,7 +65,7 @@ const Navbar = () => {
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
+                                    d="M4 6h16M4 12h16m-7 6h7" />
                                 </svg>
                             </div>
                             {user ? (
@@ -213,4 +211,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

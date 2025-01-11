@@ -17,15 +17,8 @@ const Wishlist = () => {
     };
 
     useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
         fetch("https://techno-server.up.railway.app/watchListsdata")
-=======
-        fetch("http://localhost:5222/watchListsdata")
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
-=======
-        fetch("http://localhost:5222/watchListsdata")
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
+
         .then((res) => res.json())
         .then((data) => {
             console.log("Fetched Data:", data);
@@ -50,15 +43,7 @@ const Wishlist = () => {
             dangerMode: true,
             }).then((willDelete) => {
             if (willDelete) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 fetch(`https://techno-server.up.railway.app/watchListsdata/${id}`, {
-=======
-                fetch(`http://localhost:5222/watchListsdata/${id}`, {
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
-=======
-                fetch(`http://localhost:5222/watchListsdata/${id}`, {
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
                 method: "DELETE",
                 })
                 .then((res) => {
@@ -81,8 +66,6 @@ const Wishlist = () => {
 
 
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="flex flex-col min-h-screen">
             <Navbar />
             <div className="flex-grow">
@@ -143,72 +126,6 @@ const Wishlist = () => {
             <Footer />
         </div>
 
-=======
-=======
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
-        <div>
-        <Navbar />
-        <div>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    {/* Table Head */}
-                    <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Blog Length</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    {data.map((item) => (
-                    <tbody key={item._id}>
-                        <tr>
-                        <td>
-                            <div className="flex items-center gap-3">
-                            <div className="avatar">
-                                <div className="rounded-xl h-10 sm:h-24 w-10 sm:w-24 xl:w-32">
-                                <img src={item.Image} alt={item.name} />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="font-bold">{item.Title}</div>
-                            </div>
-                            </div>
-                        </td>
-                        <td>{item.category}</td>
-                        <td>
-                            {item.longdescription
-                            ? item.longdescription.length
-                            : 0}{" "}
-                            Word
-                        </td>
-                        <td>
-                            <button
-                            className="btn btn-outline btn-secondary w-28 mr-2"
-                            onClick={() => handleExploreDetails(item)}
-                            >
-                            Details
-                            </button>
-                            <button
-                            className="btn btn-outline text-white btn-secondary w-28"
-                            onClick={() => handleDelete(item._id)}
-                            >
-                            Remove
-                            <MdDelete />
-                            </button>
-                        </td>
-                        </tr>
-                    </tbody>
-                    ))}
-                </table>
-            </div>
-        </div>
-        <Footer />
-        </div>
-<<<<<<< HEAD
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
-=======
->>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
     );
     };
 

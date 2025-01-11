@@ -35,11 +35,12 @@ const Footer = () => {
                             <path
                             d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                         </svg>
-                        <input type="text" className="grow" placeholder="Your Fatback" />
+                        <input type="text" className="grow " placeholder="Your Fatback" />
                         </label>
-                        <button className="btn btn-active btn-secondary"
-                        onClick={()=>{toast("🤩 Fatback is send sussesfully")}}
-                        >Send<FaPaperPlane /></button>
+                        <button onClick={()=>{toast("🤩 Fatback is send sussesfully")}} to='/about' className="btn rounded-none bg-transparent relative w-24 origin-top transform border-2 border-sky-500 
+                        text-lg font-semibold text-sky-500 
+                        before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">Send
+                            </button>
                     </nav>
                     </footer>
                     <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">

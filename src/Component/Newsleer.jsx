@@ -42,34 +42,14 @@ const Newsleer = () => {
                         <p className='text-lg font-semibold'>subscribe to our Newsleer and stay update</p>
                         <form onSubmit={handelSubmit} className='flex flex-col items-start gap-3'>
                             <label className="input input-bordered flex items-center gap-2">
-                            <MdEmail />
-                                <input type="email" name='email' className="grow w-[200px] sm:w-[300px] " placeholder="Email" />
+                                <MdEmail />
+                                <input type="email" name='email' className="grow w-[200px] rounded-none sm:w-[300px] " placeholder="Email" />
                             </label>
                             <div className='flex flex-row items-center gap-2'>
-                                <button className='w-52 bg-blue-500 hover:bg-blue-300 
-                                p-2 text-lg text-white font-semibold rounded-xl'>
-                                    submits
-                                </button>
-                                {/* Framer motion */}
-                                <div className='flex flex-col items-center'>
-                                    <AnimatePresence initial={false}>
-                                        {isVisible ? (
-                                            <motion.div
-                                                initial={{ opacity: 0, scale: 0 }}
-                                                animate={{ opacity: 1, scale: 1 }}
-                                                exit={{ opacity: 0, scale: 0 }}
-                                                key="box"
-                                            />
-                                        ) : null}
-                                    </AnimatePresence>
-                                    <motion.button
-                                        className='text-4xl'
-                                        onClick={() => setIsVisible(!isVisible)}
-                                        whileTap={{ y: 1 }}
-                                    >
-                                        {isVisible ? <BiLike /> : <BiSolidLike />}
-                                    </motion.button>
-                                </div>
+                            <button to='/about' className="btn rounded-none bg-transparent relative w-40 origin-top transform border-2 border-sky-500 
+                        text-lg font-semibold text-sky-500 
+                        before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">Submit
+                            </button>
                             </div>
                         </form>
                     </div>
