@@ -13,6 +13,7 @@ if (loading) {
     // return <span className="loading loading-bars loading-lg "></span>
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='flex flex-col items-center gap-6'>
             <div className="p-6 rounded-md shadow-md mx-auto max-w-fit bg-[#657287] ">
                     <div className="animate-pulse">
@@ -38,6 +39,8 @@ if (loading) {
                         <div className="w-[200px] h-4 rounded-lg bg-[#9FADC2] mb-4"></div>
                     </div>
 =======
+=======
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
         <div className="flex flex-col items-center justify-center mt-10">
           {/* Skeleton Container */}
             <div className="flex flex-col items-center gap-6">
@@ -47,6 +50,9 @@ if (loading) {
             <Skeleton height={50} width={300} />
             <Skeleton height={30} width={300} />
             <Skeleton count={5} height={25} width={350} />
+<<<<<<< HEAD
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
+=======
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
             </div>
         </div>

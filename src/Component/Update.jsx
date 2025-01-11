@@ -47,7 +47,11 @@ const Update = () => {
 
         // send data to the server
 <<<<<<< HEAD
+<<<<<<< HEAD
         fetch(`https://techno-server.up.railway.app/update/${id}`, {
+=======
+        fetch(`http://localhost:5222/update/${id}`, {
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
         fetch(`http://localhost:5222/update/${id}`, {
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6

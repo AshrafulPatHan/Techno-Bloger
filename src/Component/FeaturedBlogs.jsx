@@ -65,7 +65,11 @@ const FeaturedBlogs = () => {
 
     useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         fetch("https://techno-server.up.railway.app/featured-blogs")
+=======
+        fetch("http://localhost:5222/featured-blogs")
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
         fetch("http://localhost:5222/featured-blogs")
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6

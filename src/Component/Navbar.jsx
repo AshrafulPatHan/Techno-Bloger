@@ -45,7 +45,11 @@ const Navbar = () => {
         <div className='sticky top-0 z-50'>
             <div   style={{backgroundColor:"#FFFFFF80",}} >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="navbar mb-16">
+=======
+                <div className="navbar">
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
                 <div className="navbar">
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6

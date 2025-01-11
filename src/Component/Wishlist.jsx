@@ -18,7 +18,11 @@ const Wishlist = () => {
 
     useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         fetch("https://techno-server.up.railway.app/watchListsdata")
+=======
+        fetch("http://localhost:5222/watchListsdata")
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
         fetch("http://localhost:5222/watchListsdata")
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
@@ -47,7 +51,11 @@ const Wishlist = () => {
             }).then((willDelete) => {
             if (willDelete) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 fetch(`https://techno-server.up.railway.app/watchListsdata/${id}`, {
+=======
+                fetch(`http://localhost:5222/watchListsdata/${id}`, {
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
                 fetch(`http://localhost:5222/watchListsdata/${id}`, {
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
@@ -73,6 +81,7 @@ const Wishlist = () => {
 
 
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex flex-col min-h-screen">
             <Navbar />
@@ -135,6 +144,8 @@ const Wishlist = () => {
         </div>
 
 =======
+=======
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
         <div>
         <Navbar />
         <div>
@@ -194,6 +205,9 @@ const Wishlist = () => {
         </div>
         <Footer />
         </div>
+<<<<<<< HEAD
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
+=======
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
     );
     };

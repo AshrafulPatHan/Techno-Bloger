@@ -22,7 +22,11 @@ const Allblogs = () => {
     // fetch data
     useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         fetch("https://techno-server.up.railway.app/alldata")
+=======
+        fetch("http://localhost:5222/alldata")
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
         fetch("http://localhost:5222/alldata")
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
@@ -41,7 +45,11 @@ const Allblogs = () => {
     // Add to WatchList
     const handleWatchList = (All) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         fetch('https://techno-server.up.railway.app/watchLists', {
+=======
+        fetch('http://localhost:5222/watchLists', {
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
         fetch('http://localhost:5222/watchLists', {
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6

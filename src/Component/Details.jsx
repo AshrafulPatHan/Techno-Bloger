@@ -53,7 +53,11 @@ const handleUpdate = (cardData) => {
         console.log("Submitted comment data:", detailData);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         fetch("https://techno-server.up.railway.app/comant", {
+=======
+        fetch("http://localhost:5222/comant", {
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
         fetch("http://localhost:5222/comant", {
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6

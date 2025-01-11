@@ -41,7 +41,11 @@ const Hero = () => {
     return (
         <div className='flex flex-col items-center justify-center mt-5'>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='flex flex-col xl:flex-row items-center xl:items-start xl:gap-10'>
+=======
+            <div className='flex flex-col xl:flex-row items-center xl:items-start'>
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
             <div className='flex flex-col xl:flex-row items-center xl:items-start'>
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
@@ -56,6 +60,7 @@ const Hero = () => {
                     </div>
                     <div className='flex gap-3'>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <Link to='/allblogs' className="btn rounded-none bg-transparent text-lg font-semibold relative w-32 origin-top transform border-2 border-sky-500 
                         text-sky-500 
                         before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">
@@ -65,10 +70,15 @@ const Hero = () => {
                         text-lg font-semibold text-sky-500 
                         before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">
 =======
+=======
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
                         <Link to='/allblogs' className="btn btn-outline btn-secondary w-32">
                             All blogs
                         </Link>
                         <Link to='/about' className="btn btn-outline btn-secondary w-32">
+<<<<<<< HEAD
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
+=======
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
                             About US
                         </Link>
@@ -76,7 +86,11 @@ const Hero = () => {
                 </div>
                 <div className='flex flex-col items-center px-4'>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className='w-[300px] sm:w-[600px] lg:w-[43.75rem] ' >
+=======
+                    <div className='w-[300px] sm:w-[600px] lg:w-[43.75rem] ' >{/* w-[700px]  */}
+>>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
 =======
                     <div className='w-[300px] sm:w-[600px] lg:w-[43.75rem] ' >{/* w-[700px]  */}
 >>>>>>> 580c1880ae5bebf67f13972764f009ddfb681ce6
