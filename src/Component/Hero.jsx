@@ -48,7 +48,7 @@ const Hero = () => {
                             <h3 className=' text-xl sm:text-2xl mt-2 font-semibold'>Explore and deep drive in technology</h3>
                         </div>
                         <p className=' text-base sm:text-lg font-medium w-[300px] sm:w-[400px] 
-                        lg:w-[500px] xl:w-[520px] 2xl:w-[720px]   '>Welcome to technobloger, your go-to source for the latest in technology. We provide in-depth reviews, insightful articles, and breaking news on startups, gadgets, and tech trends. Whether you re a tech enthusiast, entrepreneur, or industry professional, technobloger keeps you informed and ahead in the tech world.</p>
+                        lg:w-[500px] xl:w-[520px] 2xl:w-[720px]   '>Welcome to technobloger, your go-to source for the latest in technology. We provide in-depth reviews, insightful articles, and breaking news on startups, gadgets, and tech trends. Whether you re a tech enthusiast, entrepreneur, or industry professional, technobloger keeps your informed and ahead in the tech world.</p>
                     </div>
                     <div className='flex gap-3'>
                         <Link to='/allblogs' className="btn rounded-none bg-transparent text-lg font-semibold relative w-32 origin-top transform border-2 border-sky-500 
