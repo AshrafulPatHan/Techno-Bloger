@@ -51,7 +51,7 @@ const handleUpdate = (cardData) => {
             _id: documentId,
         };
         console.log("Submitted comment data:", detailData);
-        fetch("https://techno-server.up.railway.app/comant", {
+        fetch("https://techno-server.onrender.com/comant", {
 
             method: "PATCH",
             headers: {

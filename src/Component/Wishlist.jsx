@@ -17,7 +17,7 @@ const Wishlist = () => {
     };
 
     useEffect(() => {
-        fetch("https://techno-server.up.railway.app/watchListsdata")
+        fetch("https://techno-server.onrender.com/watchListsdata")
 
         .then((res) => res.json())
         .then((data) => {
@@ -44,7 +44,7 @@ const Wishlist = () => {
         }).then((willDelete) => {
             if (willDelete) {
                 setLoading(true); // Optional: Add a loading state
-                fetch(`https://techno-server.up.railway.app/watchListsdata/${id}`, {
+                fetch(`https://techno-server.onrender.com/watchListsdata/${id}`, {
                     method: "DELETE",
                 })
                 .then((res) => {

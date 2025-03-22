@@ -33,7 +33,7 @@ const AddBlog = () => {
         console.log(allData);
 
         // send data to the server
-        fetch('https://techno-server.up.railway.app/alldata', {
+        fetch('https://techno-server.onrender.com/alldata', {
 
             method: 'POST',
             headers: {
