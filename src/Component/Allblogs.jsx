@@ -36,7 +36,6 @@ const Allblogs = () => {
 
     // Add to WatchList
     const handleWatchList = (All) => {
-
         fetch('https://techno-server.up.railway.app/watchLists', {
             method: 'POST',
             headers: {
