@@ -33,36 +33,38 @@ const Wishlist = () => {
 
 
     const handleDelete = (id) => {
-            console.log('Deleting ID:', id); // Log ID for debugging
-        
-            swal({
+        console.log('Deleting ID:', id);
+    
+        swal({
             title: "Are you sure?",
             text: "You will not be able to recover this data!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
-            }).then((willDelete) => {
+        }).then((willDelete) => {
             if (willDelete) {
+                setLoading(true); // Optional: Add a loading state
                 fetch(`https://techno-server.up.railway.app/watchListsdata/${id}`, {
-                method: "DELETE",
+                    method: "DELETE",
                 })
                 .then((res) => {
                     if (!res.ok) throw new Error("Failed to delete");
                     return res.json();
                 })
-                .then((data) => {
-                    console.log("Delete successful:", data);
+                .then(() => {
                     setData((prevData) => prevData.filter((item) => item._id !== id));
                     swal("Deleted!", "The data has been removed successfully.", "success");
                 })
                 .catch((error) => {
                     console.error("Error deleting data:", error);
                     swal("Error!", "Failed to delete the data.", "error");
-                });
+                })
+                .finally(() => setLoading(false));
             }
-            });
-        };
-        
+        });
+    };
+
+
 
 
     return (

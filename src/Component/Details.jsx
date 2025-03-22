@@ -30,7 +30,7 @@ const handleUpdate = (cardData) => {
     const handleAddComment = (event) => {
         event.preventDefault();
         const form = event.target;
-
+				
         const Comment = form.Comment.value;
         const username = user?.displayName || "Anonymous";
         const userEmail = user?.email || "No Email Provided";
@@ -41,7 +41,7 @@ const handleUpdate = (cardData) => {
             toast.error("All fields are required");
             return;
         }
-
+		
         const detailData = {
             Comment,
             username,
