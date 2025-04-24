@@ -2,12 +2,12 @@ import './App.css';
 import { Route, Routes } from 'react-router';
 import Home from './Components/home/Home';
 import Error from './Components/error/Error';
-import Login from './Components/Login';
+import Login from './Components/auth/Login';
 import AddBlog from './page/AddBlog';
 import FeaturedBlogs from './page/FeaturedBlogs';
 import Allblogs from './page/Allblogs';
 import Wishlist from './page/Wishlist';
-import Registration from './Components/Registration';
+import Registration from './Components/auth/Registration';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
 import About from './page/About';
 import { ToastContainer } from 'react-toastify';
@@ -23,14 +23,14 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/addblog" element={<Privaterout><AddBlog  /></Privaterout>} />
-          <Route path="/allblogs" element={<Allblogs />} />
-          <Route path="/featuredblogs" element={<FeaturedBlogs />} />
-          <Route path="/wishlist" element={<Privaterout><Wishlist /></Privaterout>} />
-          <Route path="/update/:id" element={<Privaterout><Update/></Privaterout>} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/allblogs" element={<Allblogs />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/featuredblogs" element={<FeaturedBlogs />} />
+          <Route path="/addblog" element={<Privaterout><AddBlog  /></Privaterout>} />
+          <Route path="/wishlist" element={<Privaterout><Wishlist /></Privaterout>} />
+          <Route path="/update/:id" element={<Privaterout><Update/></Privaterout>} />
           <Route path="/allblogs/:id" element={<Privaterout><Details /></Privaterout>} />
           <Route path="*" element={<Error />} />
         </Routes>
