@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import Footer from './navigation/Footer';
+import Footer from '../../Components/navigation/Footer';
 import { toast } from 'react-toastify';
 import { useLocation, useNavigate } from 'react-router';
-import { AuthContext } from './AuthProvider/AuthProvider';
+import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 
 const Update = () => {
 

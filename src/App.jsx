@@ -13,7 +13,7 @@ import About from './page/About';
 import { ToastContainer } from 'react-toastify';
 import Privaterout from './Components/Rout/Privaterout';
 import Details from './page/dynamic-page/Details';
-import Update from './Components/Update';
+import Update from './page/dynamic-page/Update';
 
 
 
