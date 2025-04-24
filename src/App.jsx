@@ -1,20 +1,19 @@
 import './App.css';
 import { Route, Routes } from 'react-router';
-import Home from './Components/home/Home';
-import Error from './Components/error/Error';
-import Login from './Components/auth/Login';
-import AddBlog from './page/AddBlog';
-import FeaturedBlogs from './page/FeaturedBlogs';
-import Allblogs from './page/Allblogs';
-import Wishlist from './page/Wishlist';
-import Registration from './Components/auth/Registration';
-import AuthProvider from './Components/auth/AuthProvider/AuthProvider';
-import About from './page/About';
+import Home from './Components/home/Home.jsx';
+import Error from './Components/error/Error.jsx';
+import Login from './Components/auth/Login.jsx';
+import AddBlog from './page/AddBlog.jsx';
+import FeaturedBlogs from './page/FeaturedBlogs.jsx';
+import Allblogs from './page/Allblogs.jsx';
+import Wishlist from './page/Wishlist.jsx';
+import Registration from './Components/auth/Registration.jsx';
+import AuthProvider from './Components/auth/AuthProvider/AuthProvider.jsx';
+import About from './page/About.jsx';
 import { ToastContainer } from 'react-toastify';
-import Privaterout from './Components/Rout/Privaterout';
-import Details from './page/dynamic-page/Details';
-import Update from './page/dynamic-page/Update';
-
+import Privaterout from './Components/Rout/Privaterout.jsx';
+import Details from './page/dynamic-page/Details.jsx';
+import Update from './page/dynamic-page/Update.jsx';
 
 
 function App() {
