@@ -21,7 +21,7 @@ const Allblogs = () => {
 
     // fetch data
     useEffect(() => {
-        fetch("http://localhost:5222/alldata")
+        fetch("https://techno-server.onrender.com/alldata")
             .then((res) => res.json())
             .then((data) => {
                 setAll(data);
@@ -36,7 +36,7 @@ const Allblogs = () => {
 
     // Add to WatchList
     const handleWatchList = (All) => {
-        fetch('http://localhost:5222/watchLists', {
+        fetch('https://techno-server.onrender.com/watchLists', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
