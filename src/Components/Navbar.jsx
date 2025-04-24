@@ -160,9 +160,9 @@ const Navbar = () => {
                                 ) : (
                                     <ul tabIndex={0}
                                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                        <li><Link Link to='/Login' >Login</Link></li>
+                                        <li><Link Link to='/login' >Login</Link></li>
                                         <li>
-                                        <Link to='/Registration'>Registration</Link>
+                                        <Link to='/registration'>Registration</Link>
                                         </li>
                                     </ul>
                                 )}
@@ -197,8 +197,8 @@ const Navbar = () => {
                                     </div>
                                     ) : (
                                     <div className="flex flex-row items-center gap-1">
-                                        <Link to='/Login' className="btn text-sm sm:text-xl ">Login</Link>
-                                        <Link to='/Registration' className="btn text-sm sm:text-xl ">Register</Link>
+                                        <Link to='/login' className="btn text-sm sm:text-xl ">Login</Link>
+                                        <Link to='/registration' className="btn text-sm sm:text-xl ">Register</Link>
                                     </div>
                                 )}
                             </div>
