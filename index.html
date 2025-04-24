@@ -1,21 +1,1047 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://img.icons8.com/?size=100&id=PpgxAJRrNase&format=png&color=000000" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://img.icons8.com/?size=100&id=PpgxAJRrNase&format=png&color=000000"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>technobloger</title>
     <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+QLD+Guides&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+QLD+Guides&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Link font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Link Css -->
-    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body class="quicksand-font">
-    <div id="root"></div>
+    <!-- root -->
+      <!-- <div id="root"></div> -->
+    <!-- main spam code -->
+    <div id="root">
+      <div>
+        <div class="sticky top-0 z-50">
+          <div style="background-color: rgba(255, 255, 255, 0.5)">
+            <div class="navbar mb-16">
+              <div class="navbar-start">
+                <div class="dropdown">
+                  <div
+                    tabindex="0"
+                    role="button"
+                    class="btn btn-ghost lg:hidden"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"
+                      ></path>
+                    </svg>
+                  </div>
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                  >
+                    <li><a href="/" data-discover="true">Home</a></li>
+                    <li>
+                      <a href="/addblog" data-discover="true">AddBlog</a>
+                      <ul class="p-2">
+                        <li>
+                          <a href="/allblogs" data-discover="true">Allblogs</a>
+                        </li>
+                        <li>
+                          <a href="/featuredblogs" data-discover="true"
+                            >FeaturedBlogs</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="/wishlist" data-discover="true">Wishlist</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center">
+                  <img
+                    src="/assets/wite-CiqJxUsh.png"
+                    alt="image"
+                    class="w-[50px] sm:w-[70px]"
+                  />
+                  <p class="text-sm font-bold sm:text-xl hidden md:font-bold">
+                    technobloger
+                  </p>
+                </div>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <div
+                  class="flex lg:flex-col lg:items-center xl:flex-row items-center"
+                >
+                  <div class="flex flex-row gap-2">
+                    <a
+                      class="text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold"
+                      href="/"
+                      data-discover="true"
+                      >Home</a
+                    ><a
+                      class="text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold"
+                      href="/allblogs"
+                      data-discover="true"
+                      >All blogs</a
+                    >
+                  </div>
+                  <div class="flex flex-row gap-2">
+                    <a
+                      class="text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold"
+                      href="/featuredblogs"
+                      data-discover="true"
+                      >Featured Blogs</a
+                    ><a
+                      class="text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold"
+                      href="/addblog"
+                      data-discover="true"
+                      >Add Blog</a
+                    ><a
+                      class="text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold"
+                      href="/wishlist"
+                      data-discover="true"
+                      >Wishlist</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-end">
+                <div class="dropdown dropdown-end lg:hidden">
+                  <div tabindex="0" role="button" class="btn btn-ghost">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 496 512"
+                      class="text-4xl"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <ul
+                    tabindex="0"
+                    class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                  >
+                    <div class="tooltip" data-tip="ashraful hasan">
+                      <img
+                        src="https://lh3.googleusercontent.com/a/ACg8ocIiKxymfQB4-Q5aBDr5UbpGlVLwaezKkQvpXuLqxJd5YAd8Nhs=s96-c"
+                        alt="ashraful hasan"
+                        class="w-8 md:w-10 h-8 md:h-10 rounded-full"
+                      />
+                    </div>
+                    <button class="btn text-sky-600">Log out</button>
+                  </ul>
+                </div>
+                <label class="swap swap-rotate mr-0 md:mr-2"
+                  ><input
+                    type="checkbox"
+                    class="theme-controller"
+                    value="synthwave" /><svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    class="swap-off h-10 w-10 fill-current"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M168.2 64h-.3c-8.7 0-15.8 7.1-15.8 15.8v30.3c0 8.7 7.1 15.8 15.8 15.8h.3c8.7 0 15.8-7.1 15.8-15.8V79.8c0-8.7-7.1-15.8-15.8-15.8zM79 216.2v-.3c0-8.7-7.1-15.8-15.8-15.8H31.8c-8.7 0-15.8 7.1-15.8 15.8v.3c0 8.7 7.1 15.8 15.8 15.8h31.3c8.8 0 15.9-7.1 15.9-15.8zM79.7 149c3 3 7 4.7 11.2 4.7 4.2 0 8.2-1.7 11.2-4.7 6.1-6.2 6.1-16.2 0-22.3l-20.3-20.5c-3-3-7-4.7-11.2-4.7-4.2 0-8.2 1.7-11.2 4.7-6.1 6.2-6.1 16.2 0 22.3L79.7 149zM271 105.2c-3-3-7-4.7-11.2-4.7-4.2 0-8.2 1.7-11.2 4.7l-20.3 20.4c-6.1 6.2-6.1 16.2 0 22.3l.3.3h.1c2.9 2.8 6.8 4.3 10.8 4.3 4.2 0 8.2-1.7 11.2-4.7l20.3-20.4c6.1-6 6.1-16 0-22.2zM92.9 273.3c-4.2 0-8.2 1.7-11.2 4.7l-20.3 20.5c-6.1 6.2-6.1 16.2 0 22.3 3 3 7 4.7 11.2 4.7 4.2 0 8.2-1.7 11.2-4.7l20.3-20.5c6.1-6.2 6.1-16.2 0-22.3-3-3-7-4.7-11.2-4.7zM403.3 259.2h-2.4c-3.1 0-6.1 0-9 .4-11.3-50.3-56.1-88.2-109.7-88.2-14.6 0-28.6 2.8-41.4 7.9-5.1 2-10 4.4-14.7 7.1-32 18.5-54.1 52.4-56.2 91.6-.1 2.1-.2 4.1-.2 6.2 0 3.4.2 6.8.5 10.1 0 .4.1.8.1 1.1-37.9 3.4-67.6 37.1-67.6 76 0 41.1 33.3 76.7 74.3 76.7h226.4c51.2 0 92.7-43.4 92.7-94.8-.1-51.4-41.6-94.1-92.8-94.1z"
+                    ></path>
+                    <path
+                      d="M150.7 283.6v-.3c-.3-3.4-.5-6.8-.5-10.2 0-2.1.1-4.2.2-6.3 2.2-39.9 24.6-74.3 57.2-93.1 4.8-2.8 9.8-5.2 14.9-7.2h.1c-13.4-17-34.2-28-57.6-28-40.5 0-73.3 32.8-73.3 73.3 0 35.5 25.3 65.1 59 71.8z"
+                    ></path></svg
+                  ><svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    class="swap-on h-10 w-10 fill-current"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M123.4 183c.4-.1.8-.1 1.2-.2-.5.1-.8.2-1.2.2zM341.5 303.4C330.7 247.7 282.2 206 224 206c-34 0-65.1 12-86.5 39.1 29.4 2.2 56.7 13.1 77.7 34.2 15.6 15.7 26.6 34.9 32.1 55.8h-28.7c-13.1-37.6-48-64.5-90.6-64.5-5.1 0-12.3.6-17.7 1.7-45.7 9.4-78.3 47.6-78.3 95 0 53.4 43 96.8 96 96.8h208c44.1 0 80-36.1 80-80.6-.1-42.7-32.9-77.2-74.5-80.1z"
+                    ></path>
+                    <path
+                      d="M112.5 225.4c13.6-17.3 30.7-30.5 50.8-39.2 18.4-8 38.8-12 60.7-12 6.1 0 12.2.4 18.2 1.1-6.1-18.1-9.4-37.6-9.4-57.8 0-24.6 4.9-48.1 13.8-69.4C161.9 68.7 99 145.7 99 237.3c0 1.6 0 3.2.1 4.8.1 0 .2-.1.3-.1l13.1-16.6zM417.6 306.8c13.3 14.2 22.6 31.5 27.1 50.1 16.5-21.4 28.7-46.4 35.3-73.5-21.2 9-44.5 13.9-68.9 13.9h-3.6c3.5 2.9 6.9 6.1 10.1 9.5z"
+                    ></path></svg
+                ></label>
+                <div class="hidden lg:flex">
+                  <div
+                    class="flex flex-col items-center sm:flex sm:flex-row sm:items-center"
+                  >
+                    <div>
+                      <div class="flex flex-row items-center gap-1 md:gap-2">
+                        <div
+                          class="tooltip tooltip-bottom"
+                          data-tip="ashraful hasan"
+                        >
+                          <img
+                            src="https://lh3.googleusercontent.com/a/ACg8ocIiKxymfQB4-Q5aBDr5UbpGlVLwaezKkQvpXuLqxJd5YAd8Nhs=s96-c"
+                            alt="ashraful hasan"
+                            class="w-8 md:w-10 h-8 md:h-10 rounded-full"
+                          />
+                        </div>
+                        <button class="btn text-sky-600">Log out</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center mt-5 mb-16">
+          <div
+            class="flex flex-col xl:flex-row items-center xl:items-start xl:gap-10"
+          >
+            <div
+              class="flex flex-col text-center xl:text-start items-center xl:items-start gap-4"
+            >
+              <div class="flex flex-col items-center lg:items-start gap-2">
+                <div class="bitter-Title">
+                  <h2 class="text-3xl sm:text-3xl lg:text-5xl font-semibold">
+                    Welcome to our website
+                  </h2>
+                  <h3 class="text-xl sm:text-2xl mt-2 font-semibold">
+                    Explore and deep drive in technology
+                  </h3>
+                </div>
+                <p
+                  class="text-base sm:text-lg font-medium w-[300px] sm:w-[400px] lg:w-[500px] xl:w-[520px] 2xl:w-[720px]"
+                >
+                  Welcome to technobloger, your go-to source for the latest in
+                  technology. We provide in-depth reviews, insightful articles,
+                  and breaking news on startups, gadgets, and tech trends.
+                  Whether you re a tech enthusiast, entrepreneur, or industry
+                  professional, technobloger keeps your informed and ahead in
+                  the tech world.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <a
+                  class="btn rounded-none bg-transparent text-lg font-semibold relative w-32 origin-top transform border-2 border-sky-500 text-sky-500 before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500"
+                  href="/allblogs"
+                  data-discover="true"
+                  >All blogs</a
+                ><a
+                  class="btn rounded-none bg-transparent relative w-32 origin-top transform border-2 border-sky-500 text-lg font-semibold text-sky-500 before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500"
+                  href="/about"
+                  data-discover="true"
+                  >About US</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-4">
+              <div class="w-[300px] sm:w-[600px] lg:w-[43.75rem]">
+                <div class="slick-slider slick-initialized" dir="ltr">
+                  <button
+                    type="button"
+                    data-role="none"
+                    class="slick-arrow slick-prev"
+                    style="display: block"
+                  >
+                    Previous
+                  </button>
+                  <div class="slick-list">
+                    <div
+                      class="slick-track"
+                      style="
+                        width: 6300px;
+                        opacity: 1;
+                        transform: translate3d(-2800px, 0px, 0px);
+                      "
+                    >
+                      <div
+                        data-index="-1"
+                        tabindex="-1"
+                        class="slick-slide slick-cloned"
+                        aria-hidden="true"
+                        style="width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/K5nJv9F/0x0.jpg"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Countom computer</h2>
+                                <p>
+                                  Countom computer is the future of modern
+                                  computing it work in to principal of countome
+                                  electrode
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="0"
+                        class="slick-slide"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        style="outline: none; width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/PFr1bSG/Copilot-studio-Obalka.jpg"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Copilot</h2>
+                                <p>Copilot is free AI chat bot and toll</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="1"
+                        class="slick-slide"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        style="outline: none; width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/fD19qss/Copilot-Enterprise-Blog-Header.png"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Github Copilot</h2>
+                                <p>
+                                  Copilot is a Ai tool for developer and it free
+                                  for student
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="2"
+                        class="slick-slide"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        style="outline: none; width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/8YSN31T/vast-starlink.jpg"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Star Link</h2>
+                                <p>
+                                  Star Link is a network of satellite it provide
+                                  data from space
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="3"
+                        class="slick-slide slick-active slick-current"
+                        tabindex="-1"
+                        aria-hidden="false"
+                        style="outline: none; width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/K5nJv9F/0x0.jpg"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Countom computer</h2>
+                                <p>
+                                  Countom computer is the future of modern
+                                  computing it work in to principal of countome
+                                  electrode
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="4"
+                        tabindex="-1"
+                        class="slick-slide slick-cloned"
+                        aria-hidden="true"
+                        style="width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/PFr1bSG/Copilot-studio-Obalka.jpg"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Copilot</h2>
+                                <p>Copilot is free AI chat bot and toll</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="5"
+                        tabindex="-1"
+                        class="slick-slide slick-cloned"
+                        aria-hidden="true"
+                        style="width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/fD19qss/Copilot-Enterprise-Blog-Header.png"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Github Copilot</h2>
+                                <p>
+                                  Copilot is a Ai tool for developer and it free
+                                  for student
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="6"
+                        tabindex="-1"
+                        class="slick-slide slick-cloned"
+                        aria-hidden="true"
+                        style="width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/8YSN31T/vast-starlink.jpg"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Star Link</h2>
+                                <p>
+                                  Star Link is a network of satellite it provide
+                                  data from space
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-index="7"
+                        tabindex="-1"
+                        class="slick-slide slick-cloned"
+                        aria-hidden="true"
+                        style="width: 700px"
+                      >
+                        <div>
+                          <div
+                            class="p-3"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          >
+                            <div class="card image-full">
+                              <figure>
+                                <img
+                                  src="https://i.ibb.co.com/K5nJv9F/0x0.jpg"
+                                  alt="photo"
+                                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover"
+                                />
+                              </figure>
+                              <div class="card-body">
+                                <h2 class="card-title">Countom computer</h2>
+                                <p>
+                                  Countom computer is the future of modern
+                                  computing it work in to principal of countome
+                                  electrode
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    data-role="none"
+                    class="slick-arrow slick-next"
+                    style="display: block"
+                  >
+                    Next
+                  </button>
+                  <ul class="slick-dots" style="display: block">
+                    <li class=""><button>1</button></li>
+                    <li class=""><button>2</button></li>
+                    <li class=""><button>3</button></li>
+                    <li class="slick-active"><button>4</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center mt-6 mb-16">
+          <div class="bitter-Title">
+            <h2 class="text-4xl font-bold mb-3">About US</h2>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="flex flex-col lg:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl bg-slate-50 sm:w-[80%] w-[90%]"
+            >
+              <div>
+                <img
+                  src="https://t4.ftcdn.net/jpg/03/08/69/75/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg"
+                  class="w-full h-[250px] md:h-[350px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                />
+              </div>
+              <div class="flex flex-col items-start p-2 gap-3">
+                <h2 class="text-2xl font-bold">Technobloger</h2>
+                <p
+                  class="text-base sm:text-lg font-medium w-[300px] sm:w-[400px] lg:w-[500px] xl:w-[520px] 2xl:w-[720px]"
+                >
+                  Technobloger is your ultimate destination for the latest in
+                  technology. We provide comprehensive reviews, insightful
+                  articles, and up-to-date news on startups, gadgets, and tech
+                  trends. Whether you re a tech enthusiast, entrepreneur, or
+                  industry professional, technobloger keeps you informed and
+                  ahead in the fast-paced world of technology....
+                </p>
+                <a
+                  class="btn rounded-none bg-transparent relative w-32 origin-top transform border-2 border-sky-500 text-lg font-semibold text-sky-500 before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500"
+                  href="/about"
+                  data-discover="true"
+                  >About US</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-col items-center gap-4 mt-6">
+            <div class="bitter-Title">
+              <h2 class="text-4xl font-semibold text-center mb-3">
+                Recent Blog Posts
+              </h2>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mx-0 md:mx-5 mt-7"
+            >
+              <div>
+                <div
+                  class="flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg bg-slate-50"
+                >
+                  <div>
+                    <img
+                      src="https://github.blog/wp-content/uploads/2024/02/Copilot-Enterprise-Blog-Header.png?resize=1600%2C850"
+                      class="h-[250px] md:h-[300px] w-[300px] md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="flex flex-col ml-2 items-start">
+                    <h4 class="text-2xl font-semibold">GitHub Copilot</h4>
+                    <p class="text-sm font-semibold w-[300px]">
+                      GitHub Copilot is a code completion and automatic
+                      programming tool developed by GitHub and OpenAI
+                    </p>
+                    <div class="flex flex-row items-center gap-3">
+                      <button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Details</button
+                      ><button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg bg-slate-50"
+                >
+                  <div>
+                    <img
+                      src="https://itknowledgezone.com/wp-content/uploads/2023/02/Will-ChatGPT-take-over-the-digital-world.jpg"
+                      class="h-[250px] md:h-[300px] w-[300px] md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="flex flex-col ml-2 items-start">
+                    <h4 class="text-2xl font-semibold">ChatGPT</h4>
+                    <p class="text-sm font-semibold w-[300px]">
+                      ChatGPT is a generative artificial intelligence
+                      chatbot[2][3] developed by OpenAI and launched in 2022
+                    </p>
+                    <div class="flex flex-row items-center gap-3">
+                      <button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Details</button
+                      ><button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg bg-slate-50"
+                >
+                  <div>
+                    <img
+                      src="https://www.eway-crm.com/wp-content/uploads/2023/12/Copilot-studio_Obalka.jpg"
+                      class="h-[250px] md:h-[300px] w-[300px] md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="flex flex-col ml-2 items-start">
+                    <h4 class="text-2xl font-semibold">Microsoft Copilot</h4>
+                    <p class="text-sm font-semibold w-[300px]">
+                      Microsoft Copilot is a generative artificial intelligence
+                      chatbot developed by Microsoft
+                    </p>
+                    <div class="flex flex-row items-center gap-3">
+                      <button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Details</button
+                      ><button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg bg-slate-50"
+                >
+                  <div>
+                    <img
+                      src="https://imageio.forbes.com/specials-images/imageserve/675b55f62e8f078fc71b1fa0/0x0.jpg?format=jpg&amp;crop=3524,1981,x0,y0,safe&amp;height=900&amp;width=1600&amp;fit=bounds"
+                      class="h-[250px] md:h-[300px] w-[300px] md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="flex flex-col ml-2 items-start">
+                    <h4 class="text-2xl font-semibold">Quantum computer</h4>
+                    <p class="text-sm font-semibold w-[300px]">
+                      A quantum computer is a computer that exploits quantum
+                      mechanical phenomena. On small scales, physical matter
+                      exhibits properties of both particles and waves...
+                    </p>
+                    <div class="flex flex-row items-center gap-3">
+                      <button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Details</button
+                      ><button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg bg-slate-50"
+                >
+                  <div>
+                    <img
+                      src="https://www.innovationnewsnetwork.com/wp-content/uploads/2024/12/shutterstock_1287557662.jpg"
+                      class="h-[250px] md:h-[300px] w-[300px] md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="flex flex-col ml-2 items-start">
+                    <h4 class="text-2xl font-semibold">
+                      Large Hadron Collider
+                    </h4>
+                    <p class="text-sm font-semibold w-[300px]">
+                      The Large Hadron Collider (LHC) is the world's largest and
+                      highest-energy particle accelerator.[1][2] It was built by
+                      the European Organization for Nuclear Research (CERN)
+                      between 1998 and 2008 ...
+                    </p>
+                    <div class="flex flex-row items-center gap-3">
+                      <button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Details</button
+                      ><button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg bg-slate-50"
+                >
+                  <div>
+                    <img
+                      src="https://i0.wp.com/spacenews.com/wp-content/uploads/2024/04/vast-starlink.jpg?fit=1920%2C1080&amp;quality=89&amp;ssl=1"
+                      class="h-[250px] md:h-[300px] w-[300px] md:w-[600px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="flex flex-col ml-2 items-start">
+                    <h4 class="text-2xl font-semibold">Starlink</h4>
+                    <p class="text-sm font-semibold w-[300px]">
+                      Starlink is a satellite internet constellation operated by
+                      Starlink Services, LLC, an international
+                      telecommunications provider that is a wholly owned
+                      subsidiary of American aerospace company SpaceX
+                    </p>
+                    <div class="flex flex-row items-center gap-3">
+                      <button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Details</button
+                      ><button
+                        class="border-2 text-lg border-green-300 w-28 text-sky-400 hover:bg-green-300 p-2"
+                      >
+                        Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-col items-center">
+            <div class="bitter-Title">
+              <h4 class="text-4xl font-semibold text-center mt-6 mb-3">
+                Newsleer
+              </h4>
+            </div>
+            <div
+              class="flex flex-col lg:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 rounded-xl bg-slate-50 sm:w-[60%] w-[90%]"
+            >
+              <div>
+                <img
+                  src="https://www.goldcoastbridgeclub.com/TinyFileManager/resources/files/55///newsletter1.png"
+                  class="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform transform hover:scale-105"
+                />
+              </div>
+              <div class="flex flex-col items-start p-2 gap-3">
+                <h2 class="text-3xl font-semibold">
+                  subscribe to our Newsleer
+                </h2>
+                <p class="text-lg font-semibold">
+                  subscribe to our Newsleer and stay update
+                </p>
+                <form class="flex flex-col items-start gap-3">
+                  <label class="input input-bordered flex items-center gap-2"
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                      ></path></svg
+                    ><input
+                      type="email"
+                      name="email"
+                      class="grow w-[200px] rounded-none sm:w-[300px]"
+                      placeholder="Email"
+                  /></label>
+                  <div class="flex flex-row items-center gap-2">
+                    <button
+                      to="/about"
+                      class="btn rounded-none bg-transparent relative w-40 origin-top transform border-2 border-sky-500 text-lg font-semibold text-sky-500 before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center mt-10 mb-6">
+          <div>
+            <div class="bitter-Title">
+              <h2 class="text-4xl font-bold text-center mt-5 mb-3">
+                Our Office Location
+              </h2>
+            </div>
+            <div class="flex flex-col items-center">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10783.992102962568!2d90.54988507335206!3d23.678412175187493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1734947532333!5m2!1sen!2sbd"
+                class="h-[350px] w-[300px] sm:w-[600px] md:w-[750px] lg:w-[1000px]"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="border: 0px"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mt-4">
+            <footer class="footer bg-base-200 text-base-content p-10">
+              <nav>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Blogging</a
+                ><a class="link link-hover">Teaching</a
+                ><a class="link link-hover">Marketing</a
+                ><a class="link link-hover">Advertisement</a>
+              </nav>
+              <nav>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a
+                ><a class="link link-hover">Contact</a
+                ><a class="link link-hover">Jobs</a>
+              </nav>
+              <nav>
+                <h6 class="footer-title">Send Your Fatback</h6>
+                <label class="input input-bordered flex items-center gap-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    class="h-4 w-4 opacity-70"
+                  >
+                    <path
+                      d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"
+                    ></path>
+                    <path
+                      d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
+                    ></path></svg
+                  ><input
+                    type="text"
+                    class="grow"
+                    placeholder="Your Fatback" /></label
+                ><button
+                  to="/about"
+                  class="btn rounded-none bg-transparent relative w-24 origin-top transform border-2 border-sky-500 text-lg font-semibold text-sky-500 before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500"
+                >
+                  Send
+                </button>
+              </nav>
+            </footer>
+            <footer
+              class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4"
+            >
+              <aside class="grid-flow-col items-center">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  class="fill-current"
+                >
+                  <path
+                    d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"
+                  ></path>
+                </svg>
+                <p>technobloger<br />Providing reliable Blog since 2020</p>
+              </aside>
+              <nav class="md:place-self-center md:justify-self-end">
+                <div class="text-5xl flex flex-row items-center gap-0">
+                  <div>
+                    <a
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i
+                        class="fa-brands text-2xl fa-facebook"
+                        style="color: rgb(66, 103, 178); margin-right: 10px"
+                      ></i></a
+                    ><a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i
+                        class="fa-brands text-2xl fa-twitter"
+                        style="color: rgb(29, 161, 242); margin-right: 10px"
+                      ></i
+                    ></a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i
+                        class="fa-brands text-2xl fa-instagram"
+                        style="color: rgb(225, 48, 108); margin-right: 10px"
+                      ></i></a
+                    ><a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i
+                        class="fa-brands text-2xl fa-linkedin"
+                        style="color: rgb(66, 103, 178); margin-right: 10px"
+                      ></i
+                    ></a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.x.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fa-brands text-2xl fa-x-twitter"></i></a
+                    ><a
+                      href="https://www.youtube.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i
+                        class="fa-brands text-2xl fa-youtube"
+                        style="color: rgb(225, 48, 108); margin-right: 10px"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </nav>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <section
+        class="Toastify"
+        aria-live="polite"
+        aria-atomic="false"
+        aria-relevant="additions text"
+        aria-label="Notifications Alt+T"
+      ></section>
+    </div>
+
+    <!-- main spam code -->
+    <!-- script -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ import FeaturedBlogs from './page/FeaturedBlogs';
 import Allblogs from './page/Allblogs';
 import Wishlist from './page/Wishlist';
 import Registration from './Components/auth/Registration';
-import AuthProvider from './Components/AuthProvider/AuthProvider';
+import AuthProvider from './Components/auth/AuthProvider/AuthProvider';
 import About from './page/About';
 import { ToastContainer } from 'react-toastify';
 import Privaterout from './Components/Rout/Privaterout';

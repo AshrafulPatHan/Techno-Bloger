@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Components/navigation/Navbar';
 import Footer from '../Components/navigation/Footer';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router';
-import { AuthContext } from '../Components/AuthProvider/AuthProvider';
+import { AuthContext } from '../Components/auth/AuthProvider/AuthProvider';
 
 
 const AddBlog = () => {

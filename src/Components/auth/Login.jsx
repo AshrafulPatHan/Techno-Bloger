@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from '../navigation/Navbar';
+import Footer from '../navigation/Footer';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // ----
 import { GoogleAuthProvider, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import auth from '../Firebase/Firebase.init';
+import auth from './Firebase/Firebase.init';
 import { Link, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { FaEye } from 'react-icons/fa';

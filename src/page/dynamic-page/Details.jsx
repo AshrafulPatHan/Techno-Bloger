@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "../../Components/navigation/Navbar";
 import Footer from "../../Components/navigation/Footer";
 import { toast } from "react-toastify";
-import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import { AuthContext } from "../../Components/auth/AuthProvider/AuthProvider";
 import { FaCommentDots } from "react-icons/fa";
 import { MdTipsAndUpdates } from "react-icons/md";
 

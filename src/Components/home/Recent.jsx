@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
-import { AuthContext } from './AuthProvider/AuthProvider';
+import { AuthContext } from '../auth/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Recent = () => {
