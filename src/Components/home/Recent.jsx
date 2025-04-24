@@ -75,7 +75,7 @@ useEffect(() => {
                             <div key={All.id}>
                                 <div className='flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 
                                 rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg
-                                bg-slate-50'>
+                                bg-slate-50 dark:bg-[#111010]'>
                                     <div>
                                         <img src={All.Image} 
                                         className=" h-[250px] md:h-[300px] w-[300px]  md:w-[600px]

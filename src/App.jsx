@@ -18,8 +18,8 @@ import Update from './page/dynamic-page/Update.jsx';
 
 function App() {
   return (
-    <>
-      <AuthProvider>
+    <div className='bg-white dark:bg-gray-900 text-black dark:text-white'>
+      <AuthProvider >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -45,7 +45,7 @@ function App() {
           pauseOnHover
         />
       </AuthProvider>
-    </>
+    </div>
   );
 }
 

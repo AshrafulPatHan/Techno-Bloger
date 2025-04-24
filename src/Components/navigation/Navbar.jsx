@@ -31,26 +31,29 @@ const Navbar = () => {
         };
         const [showTooltip, setShowTooltip] = useState(false);
 
-        const [theme, setTheme] = useState('light'); 
+    // chang mode
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
-        useEffect(() => {
-            const currentTheme = localStorage.getItem('theme') || 'light';
-            setTheme(currentTheme);
-            document.documentElement.setAttribute('data-theme', currentTheme);
-        }, []);
+    useEffect(() => {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      localStorage.setItem('theme', theme);
+    }, [theme]);
+    
+    const toggleTheme = () => {
+      setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+    };
+    
 
-        const toggleTheme = () => {
-            const newTheme = theme === 'light' ? 'dark' : 'light';
-            setTheme(newTheme);
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        };
 
 
     return (
         <div className='sticky top-0 z-50'>
             <div   style={{backgroundColor:"#FFFFFF80",}} >
-                <div className="navbar mb-16">
+                <div className="navbar ">
                     <div className="navbar-start">
                         {/* mobile dropdown */}
                         <div className="dropdown">
@@ -94,7 +97,7 @@ const Navbar = () => {
                         {/* company name */}
                         <div className='flex flex-col sm:flex-row items-center'>
                             <img src={Logo} alt="image" className='w-[50px] sm:w-[70px] '/>
-                            <p className="text-sm font-bold sm:text-xl hidden md:font-bold">technobloger</p>
+                            <p className="text-sm font-bold sm:text-xl hidden md:font-bold">Technoblogger</p>
                         </div>
                     </div>
                     {/* navigation */}
@@ -167,7 +170,7 @@ const Navbar = () => {
                                     </ul>
                                 )}
                         </div>
-                        {/* light mode /dark mode */}
+                        {/* light mode /dark mode ------------- */}
                         <label className="swap swap-rotate mr-0 md:mr-2">
                             <input type="checkbox" onClick={toggleTheme} className="theme-controller" value="synthwave" />
                             {/* sun icon */}

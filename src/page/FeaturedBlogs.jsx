@@ -85,8 +85,8 @@ const FeaturedBlogs = () => {
     return (
         <div>
             <Navbar />
-            <div>
-                <DataTable
+            <div className='bg-slate-50 dark:bg-black '>
+                <DataTable className='bg-slate-50 dark:bg-black '
                     title="Featured Blogs"
                     columns={columns}
                     data={data}

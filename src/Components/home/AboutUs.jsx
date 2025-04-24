@@ -4,13 +4,13 @@ import { Link } from "react-router";
 
 const AboutUs = () => {
     return (
-        <div className="flex flex-col items-center mt-6 mb-16">
+        <div className="flex flex-col items-center mt-6 mb-16 ">
             <div className='bitter-Title'>
                 <h2 className="text-4xl font-bold mb-3">About US</h2>
             </div>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center  ">
                 <div className='flex flex-col lg:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 
-                    rounded-xl bg-slate-50 sm:w-[80%] w-[90%] '>
+                    rounded-xl bg-slate-50 sm:w-[80%] w-[90%]  dark:bg-[#111010] '>
                     <div>
                         <img
                             src="https://t4.ftcdn.net/jpg/03/08/69/75/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg"

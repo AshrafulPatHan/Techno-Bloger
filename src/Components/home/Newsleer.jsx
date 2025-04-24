@@ -29,11 +29,11 @@ const Newsleer = () => {
                     <h4 className='text-4xl font-semibold text-center mt-6 mb-3'>Newsleer</h4>
                 </div>
                 <div className='flex flex-col lg:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 
-                    rounded-xl bg-slate-50 sm:w-[60%] w-[90%] '>
+                    rounded-xl bg-slate-50 sm:w-[60%] w-[90%] dark:bg-[#111010] '>
                     <div>
                         <img
-                            src="https://www.goldcoastbridgeclub.com/TinyFileManager/resources/files/55///newsletter1.png"
-                            className="w-full h-[250px] md:h-[300px] rounded-xl object-cover transition-transform 
+                            src="https://i.ibb.co.com/q3wxqxKd/news-530220-640.jpg"
+                            className=" w-full sm:w-[350px] h-[250px] md:h-[300px] rounded-xl object-cover transition-transform 
                             transform hover:scale-105"
                             />
                     </div>
