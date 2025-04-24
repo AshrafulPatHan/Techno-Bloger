@@ -24,7 +24,7 @@ const Recent = () => {
 
     // Add to WatchList
     const handleWatchList = (All) => {
-fetch('https://techno-server.onrender.com/watchLists', {
+fetch('http://localhost:5222/watchLists', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ fetch('https://techno-server.onrender.com/watchLists', {
 
 // Fetch data
 useEffect(() => {
-    fetch("https://techno-server.onrender.com/limited-data")
+    fetch("http://localhost:5222/limited-data")
     .then((res) => res.json())
     .then((data) => {
         setAll(data);
