@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../Components/navigation/Navbar";
 import Footer from "../Components/navigation/Footer";
 import { useNavigate } from "react-router";
@@ -34,7 +34,6 @@ const Wishlist = () => {
 
     const handleDelete = (id) => {
         console.log('Deleting ID:', id);
-    
         swal({
             title: "Are you sure?",
             text: "You will not be able to recover this data!",
@@ -43,7 +42,7 @@ const Wishlist = () => {
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-                setLoading(true); // Optional: Add a loading state
+                setLoading(true); 
                 fetch(`http://localhost:5222/watchListsdata/${id}`, {
                     method: "DELETE",
                 })
@@ -52,6 +51,7 @@ const Wishlist = () => {
                     return res.json();
                 })
                 .then(() => {
+                   
                     setData((prevData) => prevData.filter((item) => item._id !== id));
                     swal("Deleted!", "The data has been removed successfully.", "success");
                 })
@@ -63,6 +63,7 @@ const Wishlist = () => {
             }
         });
     };
+    
 
 
 
