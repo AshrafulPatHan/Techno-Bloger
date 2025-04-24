@@ -24,3 +24,4 @@ a.txt
 *.njsproj
 *.sln
 *.sw?
+.vscode

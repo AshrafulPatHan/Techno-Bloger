@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
+import Footer from './navigation/Footer';
 import { toast } from 'react-toastify';
 import { useLocation, useNavigate } from 'react-router';
 import { AuthContext } from './AuthProvider/AuthProvider';

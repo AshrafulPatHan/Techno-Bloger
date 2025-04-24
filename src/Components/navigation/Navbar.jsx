@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Logo from '../assets/wite.png'
 import { AuthContext } from './AuthProvider/AuthProvider';
 import { signOut } from 'firebase/auth';
-import auth from '../Firebase/Firebase.init';
+import auth from './auth/Firebase/Firebase.init';
 import { toast } from 'react-toastify';
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'

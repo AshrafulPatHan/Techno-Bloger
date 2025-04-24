@@ -1,18 +1,18 @@
 import './App.css';
 import { Route, Routes } from 'react-router';
-import Home from './Components/Home';
-import Error from './Components/Error';
+import Home from './Components/home/Home';
+import Error from './Components/error/Error';
 import Login from './Components/Login';
-import AddBlog from './Components/AddBlog';
-import FeaturedBlogs from './Components/FeaturedBlogs';
-import Allblogs from './Components/Allblogs';
-import Wishlist from './Components/Wishlist';
+import AddBlog from './page/AddBlog';
+import FeaturedBlogs from './page/FeaturedBlogs';
+import Allblogs from './page/Allblogs';
+import Wishlist from './page/Wishlist';
 import Registration from './Components/Registration';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
-import About from './Components/About';
+import About from './page/About';
 import { ToastContainer } from 'react-toastify';
 import Privaterout from './Components/Rout/Privaterout';
-import Details from './Components/Details';
+import Details from './page/dynamic-page/Details';
 import Update from './Components/Update';
 
 
