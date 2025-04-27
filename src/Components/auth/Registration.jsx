@@ -71,7 +71,7 @@ const Registration = () => {
                         console.log('Profile updated successfully');
                         const userData ={ name, email, photoURL};
                         // -----------send to server
-                        fetch('http://localhost:5222/userData', {
+                        fetch('https://techno-server.onrender.com/userData', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',

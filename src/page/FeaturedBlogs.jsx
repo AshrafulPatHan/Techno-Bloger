@@ -64,7 +64,7 @@ const FeaturedBlogs = () => {
     ];
 
     useEffect(() => {
-        fetch("http://localhost:5222/featured-blogs")
+        fetch("https://techno-server.onrender.com/featured-blogs")
             .then((res) => res.json())
             .then((data) => {
                 console.log("Fetched Data:", data);

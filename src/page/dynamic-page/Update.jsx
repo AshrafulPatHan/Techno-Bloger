@@ -46,7 +46,7 @@ const Update = () => {
         const { _id: id } = cardData; // Get ID from cardData
 
         // send data to the server
-        fetch(`http://localhost:5222/update/${id}`, {
+        fetch(`https://techno-server.onrender.com/update/${id}`, {
 
             method: 'PUT',
             headers: {
