@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../auth/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
+import { motion } from "motion/react"
 
 const Recent = () => {
     const [all, setAll] = useState([]);
@@ -64,51 +65,55 @@ useEffect(() => {
 
     return (
         <div>
-            <div className='flex flex-col items-center gap-4 mt-6'>
+            <div className='flex flex-col items-center gap-4 mt-6 '>
                 <div className='bitter-Title'>
                     <h2 className='text-4xl font-semibold text-center mb-3'>Recent Blog Posts</h2>
                 </div>
-                {/* test cord */}
-                
                 {/* Card */}
-                <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mx-0 md:mx-5 mt-7'>
+                <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 lg:gap-6 mx-0 lg:mx-6 mt-7 '>
                     {
                         all.map(All => (
                             <div key={All.id}>
-                                <div className='flex flex-col xl:flex-row items-start gap-3 border-2 text-lg border-blue-50 p-5 
-                                rounded-xl transition-transform transform hover:-translate-y-2 hover:shadow-lg
-                                bg-slate-50 dark:bg-[#111010]'>
-                                    <div>
-                                        <img src={All.Image} 
-                                        className=" h-[250px] md:h-[300px] w-[300px]  md:w-[600px]
-                                        rounded-xl object-cover 
-                                        transition-transform transform hover:scale-105"
-                                        alt="photo" />
+                                <motion.div
+                                whileHover={{
+                                    y:-9,
+                                }}
+                                transition={{
+                                    ease:"easeInOut",
+                                    duration:0.3,
+                                }}
+                                className="w-[350px] h-[520px] space-y-4 rounded-lg bg-white p-6 shadow-lg dark:shadow-[#303c42] hover:shadow-xl 
+                                    md:w-[350px] dark:bg-[#18181B] flex flex-col justify-between">
+                                    <img width={400} height={400} className="h-[275px] w-[350px] rounded-lg object-cover" src={All.Image} alt="card image" />
+                                    <div className="grid gap-2">
+                                        <h1 className="text-lg font-semibold ">{All.Title}</h1>
+                                        <p className="text-sm text-gray-500 dark:text-white/60">
+                                            {All.shortdescription}
+                                        </p>
                                     </div>
-                                    <div className='flex flex-col ml-2 items-start'>
-                                        <h4 className='text-2xl font-semibold'>{All.Title}</h4>
-                                        <p className='text-sm font-semibold w-[300px] '>{All.shortdescription}</p>
-                                        <div className='flex flex-row items-center gap-3'>
-                                            <button className='border-2 text-lg border-green-300 w-28 text-sky-400 
-                                            hover:bg-green-300 p-2'
-                                            onClick={() => handleExploreDetails(All)}>
-                                                Details
-                                            </button>
-                                            {user ? (
-                                                <button className='border-2 text-lg border-green-300 w-28 text-sky-400 
-                                                hover:bg-green-300 p-2'
-                                                onClick={() => handleWatchList(All)}>
-                                                    Wishlist
-                                                </button>
-                                            ) : (
-                                                <Link to='/login' className='border-2 text-lg border-green-300 w-28 text-sky-400 
-                                                hover:bg-green-300 p-2'>
-                                                    Wishlist
-                                                </Link>
-                                            )}
-                                        </div>
+                                    <div className="flex gap-4 ">
+                                        <motion.button 
+                                        whileHover={{ scale: 1.08 }}
+                                        whileTap={{ scale: 0.8 }}
+                                        className="rounded-lg bg-slate-800 px-6 py-2 text-[12px] font-semibold text-white duration-300 
+                                        hover:bg-slate-950 sm:text-sm md:text-base ">
+                                            Details
+                                        </motion.button>
+                                        {user ? (
+                                            <motion.button
+                                            whileHover={{ scale: 1.08 }}
+                                            whileTap={{ scale: 0.8 }}
+                                            className='btn btn-active btn-primary  text-white text-[16px] font-semibold  '
+                                            onClick={() => handleWatchList(All)}>
+                                                Wishlist
+                                            </motion.button>
+                                        ) : (
+                                            <Link to='/login' className='btn btn-active btn-primary text-white text-[16px] font-semibold'>
+                                                Wishlist
+                                            </Link>
+                                        )}
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         ))
                     }
