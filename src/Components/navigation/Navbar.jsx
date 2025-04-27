@@ -74,7 +74,7 @@ const Navbar = () => {
                     <div className="navbar-start">
                         {/* mobile dropdown */}
                         <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-black">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-5 w-5"
@@ -90,7 +90,7 @@ const Navbar = () => {
                             </div>
                             {user ? (
                                 <ul tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white ">
                                     <li><Link to='/'>Home</Link></li>
                                     <li>
                                     <Link to='/addblog'>AddBlog</Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
                         {/* company name */}
                         <div className='flex flex-row items-center'>
                             <img src={Logo} alt="image" className='w-[50px] '/>
-                            <p className="text-sm font-bold sm:text-xl flex md:font-bold">Technobloger</p>
+                            <p className="text-sm font-bold sm:text-xl flex md:font-bold text-black">Technobloger</p>
                         </div>
                     </div>
                     {/* navigation */}

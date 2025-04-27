@@ -82,7 +82,7 @@ useEffect(() => {
                                     ease:"easeInOut",
                                     duration:0.3,
                                 }}
-                                className="w-[350px] h-[520px] space-y-4 rounded-lg bg-white p-6 shadow-lg dark:shadow-[#303c42] hover:shadow-xl 
+                                className="w-[99vw] sm:w-[350px] h-[520px] space-y-4 rounded-lg bg-white p-6 shadow-lg dark:shadow-[#303c42] hover:shadow-xl 
                                     md:w-[350px] dark:bg-[#18181B] flex flex-col justify-between">
                                     <img width={400} height={400} className="h-[275px] w-[350px] rounded-lg object-cover" src={All.Image} alt="card image" />
                                     <div className="grid gap-2">
@@ -96,7 +96,8 @@ useEffect(() => {
                                         whileHover={{ scale: 1.08 }}
                                         whileTap={{ scale: 0.8 }}
                                         className="rounded-lg bg-slate-800 px-6 py-2 text-[12px] font-semibold text-white duration-300 
-                                        hover:bg-slate-950 sm:text-sm md:text-base ">
+                                        hover:bg-slate-950 sm:text-sm md:text-base "
+                                        onClick={() => handleExploreDetails(All)}>
                                             Details
                                         </motion.button>
                                         {user ? (
