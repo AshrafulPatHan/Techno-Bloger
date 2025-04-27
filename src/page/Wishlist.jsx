@@ -17,7 +17,7 @@ const Wishlist = () => {
     };
 
     useEffect(() => {
-        fetch("https://techno-server.onrender.com/watchListsdata")
+        fetch("http://localhost:5222/watchListsdata")
 
         .then((res) => res.json())
         .then((data) => {
@@ -43,7 +43,7 @@ const Wishlist = () => {
         }).then((willDelete) => {
             if (willDelete) {
                 setLoading(true); 
-                fetch(`https://techno-server.onrender.com/watchListsdata/${id}`, {
+                fetch(`http://localhost:5222/watchListsdata/${id}`, {
                     method: "DELETE",
                 })
                 .then((res) => {
