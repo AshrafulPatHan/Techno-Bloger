@@ -100,6 +100,7 @@ const Navbar = () => {
                                     </ul>
                                     </li>
                                     <li><Link to='/wishlist'>Wishlist</Link></li>
+                                    <li><Link to='/dashboard'>Dashboard</Link></li>
                                 </ul>
                         ) : (
                             <ul tabIndex={0}
@@ -121,23 +122,26 @@ const Navbar = () => {
                     <div className="navbar-center hidden lg:flex">
                         {user ? (
                             <div className=' flex lg:flex-col xl:flex-row items-center xl:gap-4'>
-                                <div className='flex flex-row items-center gap-4 '>
+                                <div className='flex flex-row items-center gap-6 xl:gap-4 '>
                                     <Link to='/' className=' text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
-                                    Home
+                                        Home
                                     </Link>
                                     <Link to='/allblogs' className=' text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
-                                    All blogs
+                                        All blogs
+                                    </Link>
+                                    <Link to='/featuredblogs' className=' text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
+                                        Featured Blogs
                                     </Link>
                                 </div>
-                                <div className='flex flex-row gap-4'>
-                                    <Link to='/featuredblogs' className=' text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
-                                    Featured Blogs
-                                    </Link>
+                                <div className='flex flex-row items-center gap-6 xl:gap-4'>
                                     <Link to='/addblog' className='text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
-                                    Add Blog
+                                        Add Blog
                                     </Link>
                                     <Link to='/wishlist' className='text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
-                                    Wishlist
+                                        Wishlist
+                                    </Link>
+                                    <Link to='/dashboard' className='text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
+                                        Dashboard
                                     </Link>
                                 </div>
                             </div>
@@ -159,7 +163,7 @@ const Navbar = () => {
                         {/* user in mobile */}
                         <div className="dropdown dropdown-end lg:hidden">
                             <div tabIndex={0} role="button" className="btn btn-ghost ">
-                            <FaRegUserCircle className='text-4xl' />
+                            <FaRegUserCircle className='text-4xl text-black' />
                             </div>
                                 {user ? (
                                     <ul tabIndex={0}

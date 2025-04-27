@@ -14,6 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import Privaterout from './Components/Rout/Privaterout.jsx';
 import Details from './page/dynamic-page/Details.jsx';
 import Update from './page/dynamic-page/Update.jsx';
+import Dashboard from './page/Dashboard.jsx';
 
 
 function App() {
@@ -27,9 +28,10 @@ function App() {
           <Route path="/allblogs" element={<Allblogs />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/featuredblogs" element={<FeaturedBlogs />} />
-          <Route path="/addblog" element={<Privaterout><AddBlog  /></Privaterout>} />
-          <Route path="/wishlist" element={<Privaterout><Wishlist /></Privaterout>} />
+          <Route path="/addblog" element={<Privaterout><AddBlog/></Privaterout>} />
           <Route path="/update/:id" element={<Privaterout><Update/></Privaterout>} />
+          <Route path="/wishlist" element={<Privaterout><Wishlist /></Privaterout>} />
+          <Route path="/dashboard" element={<Privaterout><Dashboard /></Privaterout>} />
           <Route path="/allblogs/:id" element={<Privaterout><Details /></Privaterout>} />
           <Route path="*" element={<Error />} />
         </Routes>
