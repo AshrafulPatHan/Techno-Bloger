@@ -68,6 +68,8 @@ useEffect(() => {
                 <div className='bitter-Title'>
                     <h2 className='text-4xl font-semibold text-center mb-3'>Recent Blog Posts</h2>
                 </div>
+                {/* test cord */}
+                
                 {/* Card */}
                 <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mx-0 md:mx-5 mt-7'>
                     {

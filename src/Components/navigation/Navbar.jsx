@@ -47,12 +47,29 @@ const Navbar = () => {
       setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
     };
     
+    // scorle background
+    const [scrolled, setScrolled] = useState(false);
 
+    useEffect(() => {
+      const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        setScrolled(isScrolled);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      // cleanup
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
 
 
     return (
         <div className='sticky top-0 z-50'>
-            <div   style={{backgroundColor:"#FFFFFF80",}} >
+            <div   className={` transition-colors duration-300 ${
+            scrolled ? "bg-[#B5FCCD]" : "bg-white"
+                }`} >
                 <div className="navbar ">
                     <div className="navbar-start">
                         {/* mobile dropdown */}
@@ -95,47 +112,47 @@ const Navbar = () => {
                         )}
                         </div>
                         {/* company name */}
-                        <div className='flex flex-col sm:flex-row items-center'>
-                            <img src={Logo} alt="image" className='w-[50px] sm:w-[70px] '/>
-                            <p className="text-sm font-bold sm:text-xl hidden md:font-bold">Technoblogger</p>
+                        <div className='flex flex-row items-center'>
+                            <img src={Logo} alt="image" className='w-[50px] '/>
+                            <p className="text-sm font-bold sm:text-xl flex md:font-bold">Technobloger</p>
                         </div>
                     </div>
                     {/* navigation */}
                     <div className="navbar-center hidden lg:flex">
                         {user ? (
-                            <div className=' flex lg:flex-col lg:items-center xl:flex-row items-center'>
-                                <div className='flex flex-row gap-2'>
-                                    <Link to='/' className=' text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold'>
+                            <div className=' flex lg:flex-col xl:flex-row items-center xl:gap-4'>
+                                <div className='flex flex-row items-center gap-4 '>
+                                    <Link to='/' className=' text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
                                     Home
                                     </Link>
-                                    <Link to='/allblogs' className=' text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold'>
+                                    <Link to='/allblogs' className=' text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
                                     All blogs
                                     </Link>
                                 </div>
-                                <div className='flex flex-row gap-2'>
-                                    <Link to='/featuredblogs' className=' text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold'>
+                                <div className='flex flex-row gap-4'>
+                                    <Link to='/featuredblogs' className=' text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
                                     Featured Blogs
                                     </Link>
-                                    <Link to='/addblog' className='text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold'>
+                                    <Link to='/addblog' className='text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
                                     Add Blog
                                     </Link>
-                                    <Link to='/wishlist' className='text-xl p-2 text-green-400 rounded-md hover:bg-green-100 font-bold'>
+                                    <Link to='/wishlist' className='text-xl text-green-600 rounded-md hover:text-blue-500 transition-all duration-500 font-bold'>
                                     Wishlist
                                     </Link>
                                 </div>
                             </div>
                         ) : (
-                        <ul className="menu menu-horizontal px-1">
-                            <li>
-                                <Link to='/' className='text-2xl text-green-400 font-bold'>Home</Link>
-                            </li>
-                            <li>
-                            <Link to='/allblogs' className='text-2xl text-green-400 font-bold'>All blogs</Link>
-                            </li>
-                            <li>
-                            <Link to='/featuredblogs' className='text-2xl text-green-400 font-bold'>Featured Blogs</Link>
-                            </li>
-                        </ul>
+                        <div className="flex flex-row items-center gap-4 px-1">
+                            <div>
+                                <Link to='/' className='text-2xl text-green-600 font-bold hover:text-blue-500 transition-all duration-500'>Home</Link>
+                            </div>
+                            <div>
+                                <Link to='/allblogs' className='text-2xl text-green-600 font-bold hover:text-blue-500 transition-all duration-500'>All blogs</Link>
+                            </div>
+                            <div>
+                                <Link to='/featuredblogs' className='text-2xl text-green-600 font-bold hover:text-blue-500 transition-all duration-500'>Featured Blogs</Link>
+                            </div>
+                        </div>
                         )}
                     </div>
                     <div className='navbar-end '>
@@ -146,7 +163,7 @@ const Navbar = () => {
                             </div>
                                 {user ? (
                                     <ul tabIndex={0}
-                                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 px-2 shadow">
                                         <div className="tooltip" data-tip={user.displayName || "User"}>
                                             <img
                                                     src={user.photoURL || "default-avatar.png"}
@@ -162,7 +179,7 @@ const Navbar = () => {
                                     </ul>
                                 ) : (
                                     <ul tabIndex={0}
-                                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 px-2 shadow">
                                         <li><Link Link to='/login' >Login</Link></li>
                                         <li>
                                         <Link to='/registration'>Registration</Link>
@@ -174,9 +191,9 @@ const Navbar = () => {
                         <label className="swap swap-rotate mr-0 md:mr-2">
                             <input type="checkbox" onClick={toggleTheme} className="theme-controller" value="synthwave" />
                             {/* sun icon */}
-                            <IoIosPartlySunny className='swap-off h-10 w-10 fill-current' />
+                            <IoIosPartlySunny className='swap-off h-10 w-10 fill-current text-black' />
                             {/* moon icon */}
-                            <IoMdCloudyNight className="swap-on h-10 w-10 fill-current"/>
+                            <IoMdCloudyNight className="swap-on h-10 w-10 fill-current text-black"/>
                         </label>
                         {/* user in desktop */}
                         <div className='hidden lg:flex'>
@@ -184,7 +201,7 @@ const Navbar = () => {
                                 {user ? (
                                     <div >
                                         <div className='flex flex-row items-center gap-1 md:gap-2 '>
-                                            <div className="tooltip tooltip-bottom" data-tip={user.displayName || "User"}>
+                                            <div className="tooltip tooltip-bottom  text-black" data-tip={user.displayName || "User"}>
                                             <img
                                                     src={user.photoURL || "default-avatar.png"}
                                                     alt={user.displayName || "User"}

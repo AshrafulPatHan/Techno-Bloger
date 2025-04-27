@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Hero = () => {
     const settings = {
         dots: true,
+        arrows: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -51,15 +52,18 @@ const Hero = () => {
                         lg:w-[500px] xl:w-[520px] 2xl:w-[720px]   '>Welcome to technobloger, your go-to source for the latest in technology. We provide in-depth reviews, insightful articles, and breaking news on startups, gadgets, and tech trends. Whether you re a tech enthusiast, entrepreneur, or industry professional, technobloger keeps your informed and ahead in the tech world.</p>
                     </div>
                     <div className='flex gap-3'>
-                        <Link to='/allblogs' className="btn rounded-none bg-transparent text-lg font-semibold relative w-32 origin-top transform border-2 border-sky-500 
-                        text-sky-500 
-                        before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">
+                        <Link to='/allblogs' className="btn rounded-none bg-transparent
+                         hover:bg-transparent hover:border-none transition-all duration-500 
+                         text-lg font-semibold relative w-32 origin-top transform border-2 border-sky-500 
+                          text-sky-500 
+                            before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">
                             All blogs
                         </Link>
                         <Link to='/about' className="btn rounded-none bg-transparent relative w-32 origin-top transform border-2 border-sky-500 
-                        text-lg font-semibold text-sky-500 
-                        before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">About US
-                            </Link>
+                            text-lg font-semibold text-sky-500 hover:bg-transparent hover:border-none transition-all duration-500
+                            before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">
+                            About US
+                        </Link>
                     </div>
                 </div>
                 <div className='flex flex-col items-center px-4'>

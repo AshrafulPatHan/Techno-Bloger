@@ -23,7 +23,7 @@ const AboutUs = () => {
                         <p className=' text-base sm:text-lg font-medium w-[300px] sm:w-[400px] 
                         lg:w-[500px] xl:w-[520px] 2xl:w-[720px]   '>Technobloger is your ultimate destination for the latest in technology. We provide comprehensive reviews, insightful articles, and up-to-date news on startups, gadgets, and tech trends. Whether you re a tech enthusiast, entrepreneur, or industry professional, technobloger keeps you informed and ahead in the fast-paced world of technology....</p>
                         <Link to='/about' className="btn rounded-none bg-transparent relative w-32 origin-top transform border-2 border-sky-500 
-                        text-lg font-semibold text-sky-500 
+                        text-lg font-semibold text-sky-500 hover:bg-transparent hover:border-none transition-all duration-500
                         before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500">About US
                         </Link>
                     </div>
