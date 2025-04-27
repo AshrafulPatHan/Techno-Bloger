@@ -133,7 +133,8 @@ const Allblogs = () => {
                                         whileHover={{ scale: 1.08 }}
                                         whileTap={{ scale: 0.8 }}
                                         className="rounded-lg bg-slate-800 px-6 py-2 text-[12px] font-semibold text-white duration-300 
-                                        hover:bg-slate-950 sm:text-sm md:text-base ">
+                                        hover:bg-slate-950 sm:text-sm md:text-base "
+                                        onClick={()=> handleExploreDetails(All)}>
                                             Details
                                         </motion.button>
                                         {user ? (
